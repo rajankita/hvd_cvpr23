@@ -1,0 +1,1132 @@
+nohup: ignoring input
+Files already downloaded and verified
+=> creating model 'allconv'
+DataParallel(
+  (module): AllConvNet(
+    (features): Sequential(
+      (0): Conv2d(3, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): GELU()
+      (3): Conv2d(96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (4): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): GELU()
+      (6): Conv2d(96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (7): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (8): GELU()
+      (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (10): Dropout(p=0.5, inplace=False)
+      (11): Conv2d(96, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (12): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (13): GELU()
+      (14): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (15): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (16): GELU()
+      (17): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (18): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (19): GELU()
+      (20): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (21): Dropout(p=0.5, inplace=False)
+      (22): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1))
+      (23): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (24): GELU()
+      (25): Conv2d(192, 192, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1))
+      (26): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (27): GELU()
+      (28): Conv2d(192, 192, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1))
+      (29): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (30): GELU()
+      (31): AvgPool2d(kernel_size=8, stride=8, padding=0)
+    )
+    (classifier): Linear(in_features=192, out_features=10, bias=True)
+  )
+)
+the number of model parameters: 1409674
+epochs:  [8, 16, 96]
+sigmas:  [2.0, 1.0, 0.0]
+kernels:  [13.0, 7.0, 1.0]
+[  8  24 120]
+Epoch 0, kernel = [13.], sigma = [2.], weights = [1.]
+Epoch: [0/120][0/391]	LR: 0.100000	Loss 2.3098 (2.3098)	Top 1-acc 8.5938 (8.5938)	
+Epoch: [0/120][100/391]	LR: 0.100000	Loss 1.9228 (1.9216)	Top 1-acc 28.9062 (27.5758)	
+Epoch: [0/120][200/391]	LR: 0.100000	Loss 1.7045 (1.7990)	Top 1-acc 35.1562 (32.6881)	
+Epoch: [0/120][300/391]	LR: 0.100000	Loss 1.6170 (1.7279)	Top 1-acc 38.2812 (35.5819)	
+* Epoch: [0/120]	 Time 7.944180965423584	 Top 1-acc 37.640  	 Train Loss 1.676
+Test (on val set): [0/120][0/79]	Time 0.333 (0.333)	Loss 2.3194 (2.3194)	Top 1-acc 19.5312 (19.5312)	
+* Epoch: [0/120]	 Top 1-acc 25.220 	 Test Loss 2.238
+Val accuracy, current = 25.22, best = 25.22
+Epoch 1, kernel = [13.], sigma = [2.], weights = [1.]
+Epoch: [1/120][0/391]	LR: 0.097000	Loss 1.2841 (1.2841)	Top 1-acc 53.9062 (53.9062)	
+Epoch: [1/120][100/391]	LR: 0.097000	Loss 1.5093 (1.4381)	Top 1-acc 45.3125 (47.4861)	
+Epoch: [1/120][200/391]	LR: 0.097000	Loss 1.4721 (1.4173)	Top 1-acc 46.0938 (48.3675)	
+Epoch: [1/120][300/391]	LR: 0.097000	Loss 1.3778 (1.3958)	Top 1-acc 51.5625 (49.0578)	
+* Epoch: [1/120]	 Time 6.761308193206787	 Top 1-acc 49.782  	 Train Loss 1.380
+Test (on val set): [1/120][0/79]	Time 0.338 (0.338)	Loss 2.6915 (2.6915)	Top 1-acc 22.6562 (22.6562)	
+* Epoch: [1/120]	 Top 1-acc 23.650 	 Test Loss 2.612
+Val accuracy, current = 23.65, best = 25.22
+Epoch 2, kernel = [13.], sigma = [2.], weights = [1.]
+Epoch: [2/120][0/391]	LR: 0.094090	Loss 1.3797 (1.3797)	Top 1-acc 52.3438 (52.3438)	
+Epoch: [2/120][100/391]	LR: 0.094090	Loss 1.2251 (1.2608)	Top 1-acc 53.1250 (54.5096)	
+Epoch: [2/120][200/391]	LR: 0.094090	Loss 1.2422 (1.2465)	Top 1-acc 56.2500 (55.0684)	
+Epoch: [2/120][300/391]	LR: 0.094090	Loss 1.1897 (1.2360)	Top 1-acc 53.1250 (55.4843)	
+* Epoch: [2/120]	 Time 6.981210947036743	 Top 1-acc 55.940  	 Train Loss 1.226
+Test (on val set): [2/120][0/79]	Time 0.318 (0.318)	Loss 3.2461 (3.2461)	Top 1-acc 26.5625 (26.5625)	
+* Epoch: [2/120]	 Top 1-acc 23.080 	 Test Loss 3.463
+Val accuracy, current = 23.08, best = 25.22
+Epoch 3, kernel = [13.], sigma = [2.], weights = [1.]
+Epoch: [3/120][0/391]	LR: 0.091267	Loss 1.2121 (1.2121)	Top 1-acc 57.0312 (57.0312)	
+Epoch: [3/120][100/391]	LR: 0.091267	Loss 1.2283 (1.1432)	Top 1-acc 59.3750 (59.1120)	
+Epoch: [3/120][200/391]	LR: 0.091267	Loss 1.1310 (1.1388)	Top 1-acc 60.1562 (59.3789)	
+Epoch: [3/120][300/391]	LR: 0.091267	Loss 1.0510 (1.1298)	Top 1-acc 62.5000 (59.5723)	
+* Epoch: [3/120]	 Time 7.042321443557739	 Top 1-acc 60.150  	 Train Loss 1.119
+Test (on val set): [3/120][0/79]	Time 0.322 (0.322)	Loss 3.4964 (3.4964)	Top 1-acc 16.4062 (16.4062)	
+* Epoch: [3/120]	 Top 1-acc 17.730 	 Test Loss 3.269
+Val accuracy, current = 17.73, best = 25.22
+Epoch 4, kernel = [13.], sigma = [2.], weights = [1.]
+Epoch: [4/120][0/391]	LR: 0.088529	Loss 0.9544 (0.9544)	Top 1-acc 65.6250 (65.6250)	
+Epoch: [4/120][100/391]	LR: 0.088529	Loss 0.9948 (1.0475)	Top 1-acc 63.2812 (63.2116)	
+Epoch: [4/120][200/391]	LR: 0.088529	Loss 1.0424 (1.0430)	Top 1-acc 63.2812 (63.2812)	
+Epoch: [4/120][300/391]	LR: 0.088529	Loss 1.1601 (1.0356)	Top 1-acc 60.1562 (63.5330)	
+* Epoch: [4/120]	 Time 6.743706226348877	 Top 1-acc 63.802  	 Train Loss 1.031
+Test (on val set): [4/120][0/79]	Time 0.327 (0.327)	Loss 3.3562 (3.3562)	Top 1-acc 16.4062 (16.4062)	
+* Epoch: [4/120]	 Top 1-acc 17.100 	 Test Loss 3.495
+Val accuracy, current = 17.1, best = 25.22
+Epoch 5, kernel = [13.], sigma = [2.], weights = [1.]
+Epoch: [5/120][0/391]	LR: 0.085873	Loss 0.8766 (0.8766)	Top 1-acc 73.4375 (73.4375)	
+Epoch: [5/120][100/391]	LR: 0.085873	Loss 1.1670 (0.9896)	Top 1-acc 60.9375 (65.4703)	
+Epoch: [5/120][200/391]	LR: 0.085873	Loss 0.7353 (0.9817)	Top 1-acc 75.0000 (65.3724)	
+Epoch: [5/120][300/391]	LR: 0.085873	Loss 1.0269 (0.9694)	Top 1-acc 65.6250 (65.8015)	
+* Epoch: [5/120]	 Time 7.043051719665527	 Top 1-acc 66.010  	 Train Loss 0.965
+Test (on val set): [5/120][0/79]	Time 0.313 (0.313)	Loss 3.5615 (3.5615)	Top 1-acc 10.9375 (10.9375)	
+* Epoch: [5/120]	 Top 1-acc 16.120 	 Test Loss 3.530
+Val accuracy, current = 16.12, best = 25.22
+Epoch 6, kernel = [13.], sigma = [2.], weights = [1.]
+Epoch: [6/120][0/391]	LR: 0.083297	Loss 0.8100 (0.8100)	Top 1-acc 71.0938 (71.0938)	
+Epoch: [6/120][100/391]	LR: 0.083297	Loss 0.8443 (0.9132)	Top 1-acc 67.9688 (67.8140)	
+Epoch: [6/120][200/391]	LR: 0.083297	Loss 0.9774 (0.9150)	Top 1-acc 64.0625 (67.7861)	
+Epoch: [6/120][300/391]	LR: 0.083297	Loss 0.9615 (0.9150)	Top 1-acc 69.5312 (67.7222)	
+* Epoch: [6/120]	 Time 6.908148288726807	 Top 1-acc 68.006  	 Train Loss 0.911
+Test (on val set): [6/120][0/79]	Time 0.345 (0.345)	Loss 3.6862 (3.6862)	Top 1-acc 21.8750 (21.8750)	
+* Epoch: [6/120]	 Top 1-acc 25.400 	 Test Loss 3.269
+Val accuracy, current = 25.4, best = 25.4
+Epoch 7, kernel = [13.], sigma = [2.], weights = [1.]
+Epoch: [7/120][0/391]	LR: 0.080798	Loss 0.8785 (0.8785)	Top 1-acc 70.3125 (70.3125)	
+Epoch: [7/120][100/391]	LR: 0.080798	Loss 0.8423 (0.8544)	Top 1-acc 70.3125 (69.9954)	
+Epoch: [7/120][200/391]	LR: 0.080798	Loss 0.8963 (0.8604)	Top 1-acc 69.5312 (69.7178)	
+Epoch: [7/120][300/391]	LR: 0.080798	Loss 0.7580 (0.8636)	Top 1-acc 71.8750 (69.5676)	
+* Epoch: [7/120]	 Time 6.870755910873413	 Top 1-acc 69.668  	 Train Loss 0.862
+Test (on val set): [7/120][0/79]	Time 0.349 (0.349)	Loss 5.3924 (5.3924)	Top 1-acc 17.9688 (17.9688)	
+* Epoch: [7/120]	 Top 1-acc 16.910 	 Test Loss 5.053
+Val accuracy, current = 16.91, best = 25.4
+Epoch 8, kernel = [13.  7.], sigma = [2. 1.], weights = [0.25 0.75]
+Epoch: [8/120][0/391]	LR: 0.078374	Loss 0.8780 (0.8780)	Top 1-acc 68.7500 (68.7500)	
+Epoch: [8/120][100/391]	LR: 0.078374	Loss 0.7327 (0.7958)	Top 1-acc 71.0938 (72.0684)	
+Epoch: [8/120][200/391]	LR: 0.078374	Loss 0.8357 (0.7787)	Top 1-acc 71.0938 (72.6796)	
+Epoch: [8/120][300/391]	LR: 0.078374	Loss 0.5985 (0.7597)	Top 1-acc 78.1250 (73.4038)	
+* Epoch: [8/120]	 Time 6.979506254196167	 Top 1-acc 73.660  	 Train Loss 0.754
+Test (on val set): [8/120][0/79]	Time 0.325 (0.325)	Loss 1.0319 (1.0319)	Top 1-acc 71.8750 (71.8750)	
+* Epoch: [8/120]	 Top 1-acc 60.820 	 Test Loss 1.369
+Val accuracy, current = 60.82, best = 60.82
+Epoch 9, kernel = [13.  7.], sigma = [2. 1.], weights = [0.25 0.75]
+Epoch: [9/120][0/391]	LR: 0.076023	Loss 0.6581 (0.6581)	Top 1-acc 82.0312 (82.0312)	
+Epoch: [9/120][100/391]	LR: 0.076023	Loss 0.7338 (0.7187)	Top 1-acc 75.7812 (74.5050)	
+Epoch: [9/120][200/391]	LR: 0.076023	Loss 0.6890 (0.7224)	Top 1-acc 74.2188 (74.5336)	
+Epoch: [9/120][300/391]	LR: 0.076023	Loss 0.6911 (0.7139)	Top 1-acc 77.3438 (74.8676)	
+* Epoch: [9/120]	 Time 6.971936464309692	 Top 1-acc 74.934  	 Train Loss 0.713
+Test (on val set): [9/120][0/79]	Time 0.321 (0.321)	Loss 1.4331 (1.4331)	Top 1-acc 61.7188 (61.7188)	
+* Epoch: [9/120]	 Top 1-acc 56.050 	 Test Loss 1.675
+Val accuracy, current = 56.05, best = 60.82
+Epoch 10, kernel = [13.  7.], sigma = [2. 1.], weights = [0.25 0.75]
+Epoch: [10/120][0/391]	LR: 0.073742	Loss 0.4894 (0.4894)	Top 1-acc 83.5938 (83.5938)	
+Epoch: [10/120][100/391]	LR: 0.073742	Loss 0.7775 (0.6820)	Top 1-acc 70.3125 (76.1448)	
+Epoch: [10/120][200/391]	LR: 0.073742	Loss 0.6393 (0.6813)	Top 1-acc 75.7812 (76.2127)	
+Epoch: [10/120][300/391]	LR: 0.073742	Loss 0.5645 (0.6752)	Top 1-acc 79.6875 (76.5210)	
+* Epoch: [10/120]	 Time 6.807683944702148	 Top 1-acc 76.756  	 Train Loss 0.671
+Test (on val set): [10/120][0/79]	Time 0.310 (0.310)	Loss 1.4196 (1.4196)	Top 1-acc 64.0625 (64.0625)	
+* Epoch: [10/120]	 Top 1-acc 57.760 	 Test Loss 1.643
+Val accuracy, current = 57.76, best = 60.82
+Epoch 11, kernel = [13.  7.], sigma = [2. 1.], weights = [0.25 0.75]
+Epoch: [11/120][0/391]	LR: 0.071530	Loss 0.7378 (0.7378)	Top 1-acc 80.4688 (80.4688)	
+Epoch: [11/120][100/391]	LR: 0.071530	Loss 0.8384 (0.6282)	Top 1-acc 70.3125 (78.1714)	
+Epoch: [11/120][200/391]	LR: 0.071530	Loss 0.6248 (0.6387)	Top 1-acc 78.1250 (77.8141)	
+Epoch: [11/120][300/391]	LR: 0.071530	Loss 0.6252 (0.6348)	Top 1-acc 79.6875 (77.9797)	
+* Epoch: [11/120]	 Time 6.741846084594727	 Top 1-acc 77.876  	 Train Loss 0.637
+Test (on val set): [11/120][0/79]	Time 0.310 (0.310)	Loss 1.7362 (1.7362)	Top 1-acc 61.7188 (61.7188)	
+* Epoch: [11/120]	 Top 1-acc 56.900 	 Test Loss 1.830
+Val accuracy, current = 56.9, best = 60.82
+Epoch 12, kernel = [13.  7.], sigma = [2. 1.], weights = [0.25 0.75]
+Epoch: [12/120][0/391]	LR: 0.069384	Loss 0.5799 (0.5799)	Top 1-acc 80.4688 (80.4688)	
+Epoch: [12/120][100/391]	LR: 0.069384	Loss 0.6678 (0.6077)	Top 1-acc 80.4688 (79.0687)	
+Epoch: [12/120][200/391]	LR: 0.069384	Loss 0.6224 (0.6078)	Top 1-acc 77.3438 (78.8674)	
+Epoch: [12/120][300/391]	LR: 0.069384	Loss 0.7060 (0.6156)	Top 1-acc 72.6562 (78.6467)	
+* Epoch: [12/120]	 Time 6.82059121131897	 Top 1-acc 78.658  	 Train Loss 0.616
+Test (on val set): [12/120][0/79]	Time 0.319 (0.319)	Loss 1.3873 (1.3873)	Top 1-acc 64.0625 (64.0625)	
+* Epoch: [12/120]	 Top 1-acc 57.730 	 Test Loss 1.631
+Val accuracy, current = 57.73, best = 60.82
+Epoch 13, kernel = [13.  7.], sigma = [2. 1.], weights = [0.25 0.75]
+Epoch: [13/120][0/391]	LR: 0.067303	Loss 0.4917 (0.4917)	Top 1-acc 82.8125 (82.8125)	
+Epoch: [13/120][100/391]	LR: 0.067303	Loss 0.6285 (0.5861)	Top 1-acc 75.7812 (79.6024)	
+Epoch: [13/120][200/391]	LR: 0.067303	Loss 0.5190 (0.5886)	Top 1-acc 83.5938 (79.5359)	
+Epoch: [13/120][300/391]	LR: 0.067303	Loss 0.6743 (0.5880)	Top 1-acc 77.3438 (79.6641)	
+* Epoch: [13/120]	 Time 6.873340845108032	 Top 1-acc 79.794  	 Train Loss 0.584
+Test (on val set): [13/120][0/79]	Time 0.323 (0.323)	Loss 1.4492 (1.4492)	Top 1-acc 67.1875 (67.1875)	
+* Epoch: [13/120]	 Top 1-acc 57.860 	 Test Loss 1.639
+Val accuracy, current = 57.86, best = 60.82
+Epoch 14, kernel = [13.  7.], sigma = [2. 1.], weights = [0.25 0.75]
+Epoch: [14/120][0/391]	LR: 0.065284	Loss 0.5073 (0.5073)	Top 1-acc 78.9062 (78.9062)	
+Epoch: [14/120][100/391]	LR: 0.065284	Loss 0.4687 (0.5467)	Top 1-acc 84.3750 (81.1417)	
+Epoch: [14/120][200/391]	LR: 0.065284	Loss 0.5374 (0.5576)	Top 1-acc 82.0312 (80.7058)	
+Epoch: [14/120][300/391]	LR: 0.065284	Loss 0.5140 (0.5642)	Top 1-acc 82.0312 (80.5025)	
+* Epoch: [14/120]	 Time 6.876616477966309	 Top 1-acc 80.352  	 Train Loss 0.569
+Test (on val set): [14/120][0/79]	Time 0.330 (0.330)	Loss 3.2778 (3.2778)	Top 1-acc 44.5312 (44.5312)	
+* Epoch: [14/120]	 Top 1-acc 43.840 	 Test Loss 2.934
+Val accuracy, current = 43.84, best = 60.82
+Epoch 15, kernel = [13.  7.], sigma = [2. 1.], weights = [0.25 0.75]
+Epoch: [15/120][0/391]	LR: 0.063325	Loss 0.7957 (0.7957)	Top 1-acc 72.6562 (72.6562)	
+Epoch: [15/120][100/391]	LR: 0.063325	Loss 0.7411 (0.5566)	Top 1-acc 72.6562 (80.8400)	
+Epoch: [15/120][200/391]	LR: 0.063325	Loss 0.4028 (0.5574)	Top 1-acc 85.9375 (80.6825)	
+Epoch: [15/120][300/391]	LR: 0.063325	Loss 0.3996 (0.5613)	Top 1-acc 83.5938 (80.4895)	
+* Epoch: [15/120]	 Time 7.09369421005249	 Top 1-acc 80.504  	 Train Loss 0.560
+Test (on val set): [15/120][0/79]	Time 0.330 (0.330)	Loss 1.5420 (1.5420)	Top 1-acc 58.5938 (58.5938)	
+* Epoch: [15/120]	 Top 1-acc 57.720 	 Test Loss 1.656
+Val accuracy, current = 57.72, best = 60.82
+Epoch 16, kernel = [13.  7.], sigma = [2. 1.], weights = [0.25 0.75]
+Epoch: [16/120][0/391]	LR: 0.061425	Loss 0.5500 (0.5500)	Top 1-acc 80.4688 (80.4688)	
+Epoch: [16/120][100/391]	LR: 0.061425	Loss 0.7217 (0.5060)	Top 1-acc 76.5625 (82.4954)	
+Epoch: [16/120][200/391]	LR: 0.061425	Loss 0.6738 (0.5218)	Top 1-acc 76.5625 (81.8952)	
+Epoch: [16/120][300/391]	LR: 0.061425	Loss 0.3552 (0.5233)	Top 1-acc 88.2812 (81.9015)	
+* Epoch: [16/120]	 Time 7.068315267562866	 Top 1-acc 81.740  	 Train Loss 0.526
+Test (on val set): [16/120][0/79]	Time 0.327 (0.327)	Loss 1.9219 (1.9219)	Top 1-acc 50.7812 (50.7812)	
+* Epoch: [16/120]	 Top 1-acc 53.790 	 Test Loss 1.816
+Val accuracy, current = 53.79, best = 60.82
+Epoch 17, kernel = [13.  7.], sigma = [2. 1.], weights = [0.25 0.75]
+Epoch: [17/120][0/391]	LR: 0.059583	Loss 0.4812 (0.4812)	Top 1-acc 81.2500 (81.2500)	
+Epoch: [17/120][100/391]	LR: 0.059583	Loss 0.5783 (0.5248)	Top 1-acc 79.6875 (81.8456)	
+Epoch: [17/120][200/391]	LR: 0.059583	Loss 0.3480 (0.5131)	Top 1-acc 89.0625 (82.2217)	
+Epoch: [17/120][300/391]	LR: 0.059583	Loss 0.4360 (0.5127)	Top 1-acc 82.0312 (82.1740)	
+* Epoch: [17/120]	 Time 6.958022832870483	 Top 1-acc 82.018  	 Train Loss 0.518
+Test (on val set): [17/120][0/79]	Time 0.321 (0.321)	Loss 4.0577 (4.0577)	Top 1-acc 37.5000 (37.5000)	
+* Epoch: [17/120]	 Top 1-acc 41.160 	 Test Loss 3.420
+Val accuracy, current = 41.16, best = 60.82
+Epoch 18, kernel = [13.  7.], sigma = [2. 1.], weights = [0.25 0.75]
+Epoch: [18/120][0/391]	LR: 0.057795	Loss 0.4601 (0.4601)	Top 1-acc 84.3750 (84.3750)	
+Epoch: [18/120][100/391]	LR: 0.057795	Loss 0.4669 (0.4841)	Top 1-acc 83.5938 (83.3385)	
+Epoch: [18/120][200/391]	LR: 0.057795	Loss 0.4857 (0.5006)	Top 1-acc 82.8125 (82.7814)	
+Epoch: [18/120][300/391]	LR: 0.057795	Loss 0.4627 (0.4913)	Top 1-acc 82.8125 (82.9968)	
+* Epoch: [18/120]	 Time 6.834568023681641	 Top 1-acc 82.910  	 Train Loss 0.494
+Test (on val set): [18/120][0/79]	Time 0.299 (0.299)	Loss 2.3483 (2.3483)	Top 1-acc 45.3125 (45.3125)	
+* Epoch: [18/120]	 Top 1-acc 47.320 	 Test Loss 2.224
+Val accuracy, current = 47.32, best = 60.82
+Epoch 19, kernel = [13.  7.], sigma = [2. 1.], weights = [0.25 0.75]
+Epoch: [19/120][0/391]	LR: 0.056061	Loss 0.4825 (0.4825)	Top 1-acc 81.2500 (81.2500)	
+Epoch: [19/120][100/391]	LR: 0.056061	Loss 0.6922 (0.4893)	Top 1-acc 74.2188 (83.1374)	
+Epoch: [19/120][200/391]	LR: 0.056061	Loss 0.4002 (0.4910)	Top 1-acc 86.7188 (82.9369)	
+Epoch: [19/120][300/391]	LR: 0.056061	Loss 0.3207 (0.4909)	Top 1-acc 90.6250 (82.9345)	
+* Epoch: [19/120]	 Time 7.378308534622192	 Top 1-acc 82.896  	 Train Loss 0.491
+Test (on val set): [19/120][0/79]	Time 0.335 (0.335)	Loss 1.8532 (1.8532)	Top 1-acc 60.1562 (60.1562)	
+* Epoch: [19/120]	 Top 1-acc 54.430 	 Test Loss 2.100
+Val accuracy, current = 54.43, best = 60.82
+Epoch 20, kernel = [13.  7.], sigma = [2. 1.], weights = [0.25 0.75]
+Epoch: [20/120][0/391]	LR: 0.054379	Loss 0.3440 (0.3440)	Top 1-acc 86.7188 (86.7188)	
+Epoch: [20/120][100/391]	LR: 0.054379	Loss 0.6285 (0.4733)	Top 1-acc 78.1250 (83.5396)	
+Epoch: [20/120][200/391]	LR: 0.054379	Loss 0.6636 (0.4779)	Top 1-acc 76.5625 (83.4461)	
+Epoch: [20/120][300/391]	LR: 0.054379	Loss 0.5427 (0.4797)	Top 1-acc 82.8125 (83.4121)	
+* Epoch: [20/120]	 Time 7.058224201202393	 Top 1-acc 83.548  	 Train Loss 0.475
+Test (on val set): [20/120][0/79]	Time 0.344 (0.344)	Loss 2.6248 (2.6248)	Top 1-acc 50.0000 (50.0000)	
+* Epoch: [20/120]	 Top 1-acc 50.900 	 Test Loss 2.461
+Val accuracy, current = 50.9, best = 60.82
+Epoch 21, kernel = [13.  7.], sigma = [2. 1.], weights = [0.25 0.75]
+Epoch: [21/120][0/391]	LR: 0.052748	Loss 0.3651 (0.3651)	Top 1-acc 83.5938 (83.5938)	
+Epoch: [21/120][100/391]	LR: 0.052748	Loss 0.4940 (0.4474)	Top 1-acc 82.8125 (84.6689)	
+Epoch: [21/120][200/391]	LR: 0.052748	Loss 0.4001 (0.4530)	Top 1-acc 88.2812 (84.3089)	
+Epoch: [21/120][300/391]	LR: 0.052748	Loss 0.6838 (0.4499)	Top 1-acc 75.7812 (84.3257)	
+* Epoch: [21/120]	 Time 6.960378885269165	 Top 1-acc 84.380  	 Train Loss 0.449
+Test (on val set): [21/120][0/79]	Time 0.319 (0.319)	Loss 2.0167 (2.0167)	Top 1-acc 57.8125 (57.8125)	
+* Epoch: [21/120]	 Top 1-acc 52.400 	 Test Loss 2.041
+Val accuracy, current = 52.4, best = 60.82
+Epoch 22, kernel = [13.  7.], sigma = [2. 1.], weights = [0.25 0.75]
+Epoch: [22/120][0/391]	LR: 0.051166	Loss 0.3285 (0.3285)	Top 1-acc 88.2812 (88.2812)	
+Epoch: [22/120][100/391]	LR: 0.051166	Loss 0.4438 (0.4425)	Top 1-acc 83.5938 (84.6225)	
+Epoch: [22/120][200/391]	LR: 0.051166	Loss 0.4956 (0.4480)	Top 1-acc 82.8125 (84.3206)	
+Epoch: [22/120][300/391]	LR: 0.051166	Loss 0.4044 (0.4471)	Top 1-acc 84.3750 (84.2297)	
+* Epoch: [22/120]	 Time 6.895639419555664	 Top 1-acc 84.292  	 Train Loss 0.446
+Test (on val set): [22/120][0/79]	Time 0.327 (0.327)	Loss 1.4289 (1.4289)	Top 1-acc 67.9688 (67.9688)	
+* Epoch: [22/120]	 Top 1-acc 57.970 	 Test Loss 1.623
+Val accuracy, current = 57.97, best = 60.82
+Epoch 23, kernel = [13.  7.], sigma = [2. 1.], weights = [0.25 0.75]
+Epoch: [23/120][0/391]	LR: 0.049631	Loss 0.3677 (0.3677)	Top 1-acc 87.5000 (87.5000)	
+Epoch: [23/120][100/391]	LR: 0.049631	Loss 0.4140 (0.4330)	Top 1-acc 86.7188 (84.6380)	
+Epoch: [23/120][200/391]	LR: 0.049631	Loss 0.3195 (0.4410)	Top 1-acc 89.8438 (84.4527)	
+Epoch: [23/120][300/391]	LR: 0.049631	Loss 0.2879 (0.4405)	Top 1-acc 91.4062 (84.6423)	
+* Epoch: [23/120]	 Time 6.988001823425293	 Top 1-acc 84.844  	 Train Loss 0.435
+Test (on val set): [23/120][0/79]	Time 0.300 (0.300)	Loss 1.6582 (1.6582)	Top 1-acc 57.8125 (57.8125)	
+* Epoch: [23/120]	 Top 1-acc 57.750 	 Test Loss 1.730
+Val accuracy, current = 57.75, best = 60.82
+
+Restoring 0.1 weights to the initial weights
+Test (on val set): [24/120][0/79]	Time 0.308 (0.308)	Loss 2.3471 (2.3471)	Top 1-acc 45.3125 (45.3125)	
+* Epoch: [24/120]	 Top 1-acc 44.180 	 Test Loss 2.405
+Epoch 24, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [24/120][0/391]	LR: 0.048142	Loss 0.3636 (0.3636)	Top 1-acc 88.2812 (88.2812)	
+Epoch: [24/120][100/391]	LR: 0.048142	Loss 0.3131 (0.4224)	Top 1-acc 90.6250 (85.6126)	
+Epoch: [24/120][200/391]	LR: 0.048142	Loss 0.3184 (0.4227)	Top 1-acc 89.0625 (85.3584)	
+Epoch: [24/120][300/391]	LR: 0.048142	Loss 0.3588 (0.4123)	Top 1-acc 89.0625 (85.6157)	
+* Epoch: [24/120]	 Time 6.750077486038208	 Top 1-acc 85.872  	 Train Loss 0.405
+Test (on val set): [24/120][0/79]	Time 0.326 (0.326)	Loss 0.4294 (0.4294)	Top 1-acc 89.8438 (89.8438)	
+* Epoch: [24/120]	 Top 1-acc 87.100 	 Test Loss 0.393
+Val accuracy, current = 87.1, best = 87.1
+Epoch 25, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [25/120][0/391]	LR: 0.046697	Loss 0.2870 (0.2870)	Top 1-acc 89.0625 (89.0625)	
+Epoch: [25/120][100/391]	LR: 0.046697	Loss 0.7069 (0.3602)	Top 1-acc 78.1250 (87.6160)	
+Epoch: [25/120][200/391]	LR: 0.046697	Loss 0.2873 (0.3646)	Top 1-acc 90.6250 (87.4767)	
+Epoch: [25/120][300/391]	LR: 0.046697	Loss 0.3817 (0.3756)	Top 1-acc 87.5000 (87.1107)	
+* Epoch: [25/120]	 Time 6.945825099945068	 Top 1-acc 87.162  	 Train Loss 0.372
+Test (on val set): [25/120][0/79]	Time 0.305 (0.305)	Loss 0.5054 (0.5054)	Top 1-acc 82.8125 (82.8125)	
+* Epoch: [25/120]	 Top 1-acc 86.410 	 Test Loss 0.417
+Val accuracy, current = 86.41, best = 87.1
+Epoch 26, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [26/120][0/391]	LR: 0.045297	Loss 0.3107 (0.3107)	Top 1-acc 88.2812 (88.2812)	
+Epoch: [26/120][100/391]	LR: 0.045297	Loss 0.3935 (0.3539)	Top 1-acc 85.1562 (87.7630)	
+Epoch: [26/120][200/391]	LR: 0.045297	Loss 0.4212 (0.3493)	Top 1-acc 83.5938 (87.8692)	
+Epoch: [26/120][300/391]	LR: 0.045297	Loss 0.4076 (0.3529)	Top 1-acc 85.9375 (87.7570)	
+* Epoch: [26/120]	 Time 6.866858243942261	 Top 1-acc 87.626  	 Train Loss 0.358
+Test (on val set): [26/120][0/79]	Time 0.327 (0.327)	Loss 0.3314 (0.3314)	Top 1-acc 89.8438 (89.8438)	
+* Epoch: [26/120]	 Top 1-acc 87.220 	 Test Loss 0.413
+Val accuracy, current = 87.22, best = 87.22
+Epoch 27, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [27/120][0/391]	LR: 0.043938	Loss 0.3625 (0.3625)	Top 1-acc 85.9375 (85.9375)	
+Epoch: [27/120][100/391]	LR: 0.043938	Loss 0.8072 (0.3296)	Top 1-acc 75.7812 (88.7840)	
+Epoch: [27/120][200/391]	LR: 0.043938	Loss 0.3490 (0.3381)	Top 1-acc 89.0625 (88.4523)	
+Epoch: [27/120][300/391]	LR: 0.043938	Loss 0.2918 (0.3403)	Top 1-acc 89.8438 (88.2501)	
+* Epoch: [27/120]	 Time 6.636544227600098	 Top 1-acc 88.038  	 Train Loss 0.346
+Test (on val set): [27/120][0/79]	Time 0.310 (0.310)	Loss 0.4778 (0.4778)	Top 1-acc 82.0312 (82.0312)	
+* Epoch: [27/120]	 Top 1-acc 86.210 	 Test Loss 0.460
+Val accuracy, current = 86.21, best = 87.22
+Epoch 28, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [28/120][0/391]	LR: 0.042620	Loss 0.2511 (0.2511)	Top 1-acc 92.9688 (92.9688)	
+Epoch: [28/120][100/391]	LR: 0.042620	Loss 0.2471 (0.3301)	Top 1-acc 92.1875 (88.6293)	
+Epoch: [28/120][200/391]	LR: 0.042620	Loss 0.2680 (0.3313)	Top 1-acc 89.8438 (88.6077)	
+Epoch: [28/120][300/391]	LR: 0.042620	Loss 0.2881 (0.3346)	Top 1-acc 88.2812 (88.4058)	
+* Epoch: [28/120]	 Time 6.951407432556152	 Top 1-acc 88.398  	 Train Loss 0.335
+Test (on val set): [28/120][0/79]	Time 0.314 (0.314)	Loss 0.4396 (0.4396)	Top 1-acc 88.2812 (88.2812)	
+* Epoch: [28/120]	 Top 1-acc 84.890 	 Test Loss 0.518
+Val accuracy, current = 84.89, best = 87.22
+Epoch 29, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [29/120][0/391]	LR: 0.041341	Loss 0.3585 (0.3585)	Top 1-acc 88.2812 (88.2812)	
+Epoch: [29/120][100/391]	LR: 0.041341	Loss 0.3610 (0.3266)	Top 1-acc 85.9375 (88.6603)	
+Epoch: [29/120][200/391]	LR: 0.041341	Loss 0.3633 (0.3296)	Top 1-acc 89.0625 (88.4562)	
+Epoch: [29/120][300/391]	LR: 0.041341	Loss 0.3069 (0.3245)	Top 1-acc 89.8438 (88.7095)	
+* Epoch: [29/120]	 Time 6.82495379447937	 Top 1-acc 88.690  	 Train Loss 0.325
+Test (on val set): [29/120][0/79]	Time 0.323 (0.323)	Loss 0.4841 (0.4841)	Top 1-acc 82.8125 (82.8125)	
+* Epoch: [29/120]	 Top 1-acc 85.190 	 Test Loss 0.529
+Val accuracy, current = 85.19, best = 87.22
+Epoch 30, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [30/120][0/391]	LR: 0.040101	Loss 0.3887 (0.3887)	Top 1-acc 89.8438 (89.8438)	
+Epoch: [30/120][100/391]	LR: 0.040101	Loss 0.2821 (0.3015)	Top 1-acc 89.0625 (89.4570)	
+Epoch: [30/120][200/391]	LR: 0.040101	Loss 0.2191 (0.2971)	Top 1-acc 89.0625 (89.5600)	
+Epoch: [30/120][300/391]	LR: 0.040101	Loss 0.2108 (0.3027)	Top 1-acc 93.7500 (89.4440)	
+* Epoch: [30/120]	 Time 7.109988212585449	 Top 1-acc 89.312  	 Train Loss 0.305
+Test (on val set): [30/120][0/79]	Time 0.314 (0.314)	Loss 0.4706 (0.4706)	Top 1-acc 89.0625 (89.0625)	
+* Epoch: [30/120]	 Top 1-acc 88.290 	 Test Loss 0.388
+Val accuracy, current = 88.29, best = 88.29
+Epoch 31, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [31/120][0/391]	LR: 0.038898	Loss 0.3345 (0.3345)	Top 1-acc 88.2812 (88.2812)	
+Epoch: [31/120][100/391]	LR: 0.038898	Loss 0.4276 (0.2944)	Top 1-acc 86.7188 (89.8205)	
+Epoch: [31/120][200/391]	LR: 0.038898	Loss 0.2433 (0.3009)	Top 1-acc 92.1875 (89.5950)	
+Epoch: [31/120][300/391]	LR: 0.038898	Loss 0.2882 (0.3087)	Top 1-acc 88.2812 (89.2883)	
+* Epoch: [31/120]	 Time 6.755338907241821	 Top 1-acc 89.326  	 Train Loss 0.308
+Test (on val set): [31/120][0/79]	Time 0.323 (0.323)	Loss 0.2701 (0.2701)	Top 1-acc 88.2812 (88.2812)	
+* Epoch: [31/120]	 Top 1-acc 88.840 	 Test Loss 0.362
+Val accuracy, current = 88.84, best = 88.84
+Epoch 32, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [32/120][0/391]	LR: 0.037731	Loss 0.7114 (0.7114)	Top 1-acc 74.2188 (74.2188)	
+Epoch: [32/120][100/391]	LR: 0.037731	Loss 0.3177 (0.3007)	Top 1-acc 91.4062 (89.6426)	
+Epoch: [32/120][200/391]	LR: 0.037731	Loss 0.8304 (0.2951)	Top 1-acc 71.8750 (89.7621)	
+Epoch: [32/120][300/391]	LR: 0.037731	Loss 0.3697 (0.2929)	Top 1-acc 88.2812 (89.8463)	
+* Epoch: [32/120]	 Time 6.912906169891357	 Top 1-acc 89.754  	 Train Loss 0.293
+Test (on val set): [32/120][0/79]	Time 0.321 (0.321)	Loss 0.3671 (0.3671)	Top 1-acc 92.1875 (92.1875)	
+* Epoch: [32/120]	 Top 1-acc 89.390 	 Test Loss 0.335
+Val accuracy, current = 89.39, best = 89.39
+Epoch 33, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [33/120][0/391]	LR: 0.036599	Loss 0.2438 (0.2438)	Top 1-acc 91.4062 (91.4062)	
+Epoch: [33/120][100/391]	LR: 0.036599	Loss 0.2063 (0.2662)	Top 1-acc 90.6250 (90.6173)	
+Epoch: [33/120][200/391]	LR: 0.036599	Loss 0.2842 (0.2787)	Top 1-acc 89.0625 (90.3179)	
+Epoch: [33/120][300/391]	LR: 0.036599	Loss 0.2895 (0.2823)	Top 1-acc 88.2812 (90.2201)	
+* Epoch: [33/120]	 Time 6.802908182144165	 Top 1-acc 90.118  	 Train Loss 0.285
+Test (on val set): [33/120][0/79]	Time 0.320 (0.320)	Loss 0.1909 (0.1909)	Top 1-acc 93.7500 (93.7500)	
+* Epoch: [33/120]	 Top 1-acc 88.590 	 Test Loss 0.369
+Val accuracy, current = 88.59, best = 89.39
+Epoch 34, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [34/120][0/391]	LR: 0.035501	Loss 0.2451 (0.2451)	Top 1-acc 92.1875 (92.1875)	
+Epoch: [34/120][100/391]	LR: 0.035501	Loss 0.1917 (0.2568)	Top 1-acc 92.9688 (91.0350)	
+Epoch: [34/120][200/391]	LR: 0.035501	Loss 0.2071 (0.2738)	Top 1-acc 91.4062 (90.5395)	
+Epoch: [34/120][300/391]	LR: 0.035501	Loss 0.1835 (0.2771)	Top 1-acc 93.7500 (90.4537)	
+* Epoch: [34/120]	 Time 6.973649501800537	 Top 1-acc 90.194  	 Train Loss 0.284
+Test (on val set): [34/120][0/79]	Time 0.305 (0.305)	Loss 0.4666 (0.4666)	Top 1-acc 85.1562 (85.1562)	
+* Epoch: [34/120]	 Top 1-acc 85.580 	 Test Loss 0.501
+Val accuracy, current = 85.58, best = 89.39
+Epoch 35, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [35/120][0/391]	LR: 0.034436	Loss 0.2813 (0.2813)	Top 1-acc 88.2812 (88.2812)	
+Epoch: [35/120][100/391]	LR: 0.034436	Loss 0.2504 (0.2557)	Top 1-acc 92.1875 (91.2361)	
+Epoch: [35/120][200/391]	LR: 0.034436	Loss 0.3191 (0.2608)	Top 1-acc 91.4062 (90.9515)	
+Epoch: [35/120][300/391]	LR: 0.034436	Loss 0.1555 (0.2613)	Top 1-acc 93.7500 (90.9027)	
+* Epoch: [35/120]	 Time 6.815092086791992	 Top 1-acc 90.784  	 Train Loss 0.266
+Test (on val set): [35/120][0/79]	Time 0.310 (0.310)	Loss 0.5363 (0.5363)	Top 1-acc 84.3750 (84.3750)	
+* Epoch: [35/120]	 Top 1-acc 88.110 	 Test Loss 0.389
+Val accuracy, current = 88.11, best = 89.39
+Epoch 36, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [36/120][0/391]	LR: 0.033403	Loss 0.1687 (0.1687)	Top 1-acc 93.7500 (93.7500)	
+Epoch: [36/120][100/391]	LR: 0.033403	Loss 0.2811 (0.2491)	Top 1-acc 89.0625 (91.2825)	
+Epoch: [36/120][200/391]	LR: 0.033403	Loss 0.1907 (0.2583)	Top 1-acc 93.7500 (90.8776)	
+Epoch: [36/120][300/391]	LR: 0.033403	Loss 0.6310 (0.2609)	Top 1-acc 75.7812 (90.8716)	
+* Epoch: [36/120]	 Time 6.698425531387329	 Top 1-acc 90.632  	 Train Loss 0.270
+Test (on val set): [36/120][0/79]	Time 0.326 (0.326)	Loss 0.5034 (0.5034)	Top 1-acc 85.1562 (85.1562)	
+* Epoch: [36/120]	 Top 1-acc 87.730 	 Test Loss 0.408
+Val accuracy, current = 87.73, best = 89.39
+Epoch 37, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [37/120][0/391]	LR: 0.032401	Loss 0.2357 (0.2357)	Top 1-acc 92.1875 (92.1875)	
+Epoch: [37/120][100/391]	LR: 0.032401	Loss 0.4060 (0.2524)	Top 1-acc 86.7188 (91.1819)	
+Epoch: [37/120][200/391]	LR: 0.032401	Loss 0.3699 (0.2602)	Top 1-acc 85.1562 (90.8660)	
+Epoch: [37/120][300/391]	LR: 0.032401	Loss 0.2912 (0.2613)	Top 1-acc 89.0625 (90.7859)	
+* Epoch: [37/120]	 Time 6.93789005279541	 Top 1-acc 90.846  	 Train Loss 0.260
+Test (on val set): [37/120][0/79]	Time 0.336 (0.336)	Loss 0.2924 (0.2924)	Top 1-acc 89.8438 (89.8438)	
+* Epoch: [37/120]	 Top 1-acc 88.540 	 Test Loss 0.378
+Val accuracy, current = 88.54, best = 89.39
+Epoch 38, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [38/120][0/391]	LR: 0.031429	Loss 0.1500 (0.1500)	Top 1-acc 94.5312 (94.5312)	
+Epoch: [38/120][100/391]	LR: 0.031429	Loss 0.1221 (0.2359)	Top 1-acc 95.3125 (91.8858)	
+Epoch: [38/120][200/391]	LR: 0.031429	Loss 0.3147 (0.2375)	Top 1-acc 89.8438 (91.8843)	
+Epoch: [38/120][300/391]	LR: 0.031429	Loss 0.1175 (0.2518)	Top 1-acc 96.8750 (91.2116)	
+* Epoch: [38/120]	 Time 6.69563627243042	 Top 1-acc 91.140  	 Train Loss 0.253
+Test (on val set): [38/120][0/79]	Time 0.320 (0.320)	Loss 0.3292 (0.3292)	Top 1-acc 90.6250 (90.6250)	
+* Epoch: [38/120]	 Top 1-acc 89.210 	 Test Loss 0.336
+Val accuracy, current = 89.21, best = 89.39
+Epoch 39, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [39/120][0/391]	LR: 0.030486	Loss 0.2382 (0.2382)	Top 1-acc 89.0625 (89.0625)	
+Epoch: [39/120][100/391]	LR: 0.030486	Loss 0.1643 (0.2414)	Top 1-acc 93.7500 (91.3134)	
+Epoch: [39/120][200/391]	LR: 0.030486	Loss 0.1571 (0.2391)	Top 1-acc 96.0938 (91.6278)	
+Epoch: [39/120][300/391]	LR: 0.030486	Loss 0.1801 (0.2428)	Top 1-acc 93.7500 (91.5464)	
+* Epoch: [39/120]	 Time 6.905117750167847	 Top 1-acc 91.586  	 Train Loss 0.240
+Test (on val set): [39/120][0/79]	Time 0.326 (0.326)	Loss 0.4333 (0.4333)	Top 1-acc 90.6250 (90.6250)	
+* Epoch: [39/120]	 Top 1-acc 88.290 	 Test Loss 0.406
+Val accuracy, current = 88.29, best = 89.39
+Epoch 40, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [40/120][0/391]	LR: 0.029571	Loss 0.1593 (0.1593)	Top 1-acc 94.5312 (94.5312)	
+Epoch: [40/120][100/391]	LR: 0.029571	Loss 0.2384 (0.2119)	Top 1-acc 90.6250 (92.6748)	
+Epoch: [40/120][200/391]	LR: 0.029571	Loss 0.1369 (0.2305)	Top 1-acc 94.5312 (92.0320)	
+Epoch: [40/120][300/391]	LR: 0.029571	Loss 0.2960 (0.2363)	Top 1-acc 88.2812 (91.8060)	
+* Epoch: [40/120]	 Time 6.893777132034302	 Top 1-acc 91.756  	 Train Loss 0.238
+Test (on val set): [40/120][0/79]	Time 0.309 (0.309)	Loss 0.2892 (0.2892)	Top 1-acc 92.9688 (92.9688)	
+* Epoch: [40/120]	 Top 1-acc 89.230 	 Test Loss 0.358
+Val accuracy, current = 89.23, best = 89.39
+Epoch 41, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [41/120][0/391]	LR: 0.028684	Loss 0.1771 (0.1771)	Top 1-acc 93.7500 (93.7500)	
+Epoch: [41/120][100/391]	LR: 0.028684	Loss 0.2681 (0.2046)	Top 1-acc 89.8438 (92.9688)	
+Epoch: [41/120][200/391]	LR: 0.028684	Loss 0.1626 (0.2186)	Top 1-acc 94.5312 (92.4401)	
+Epoch: [41/120][300/391]	LR: 0.028684	Loss 0.2365 (0.2384)	Top 1-acc 92.9688 (91.8034)	
+* Epoch: [41/120]	 Time 6.961850881576538	 Top 1-acc 91.738  	 Train Loss 0.240
+Test (on val set): [41/120][0/79]	Time 0.339 (0.339)	Loss 0.1878 (0.1878)	Top 1-acc 93.7500 (93.7500)	
+* Epoch: [41/120]	 Top 1-acc 89.860 	 Test Loss 0.331
+Val accuracy, current = 89.86, best = 89.86
+Epoch 42, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [42/120][0/391]	LR: 0.027824	Loss 0.2171 (0.2171)	Top 1-acc 93.7500 (93.7500)	
+Epoch: [42/120][100/391]	LR: 0.027824	Loss 0.2255 (0.2147)	Top 1-acc 94.5312 (92.7290)	
+Epoch: [42/120][200/391]	LR: 0.027824	Loss 0.2096 (0.2240)	Top 1-acc 92.9688 (92.2886)	
+Epoch: [42/120][300/391]	LR: 0.027824	Loss 0.2659 (0.2203)	Top 1-acc 90.6250 (92.3666)	
+* Epoch: [42/120]	 Time 6.904778242111206	 Top 1-acc 92.360  	 Train Loss 0.220
+Test (on val set): [42/120][0/79]	Time 0.309 (0.309)	Loss 0.3073 (0.3073)	Top 1-acc 88.2812 (88.2812)	
+* Epoch: [42/120]	 Top 1-acc 89.560 	 Test Loss 0.357
+Val accuracy, current = 89.56, best = 89.86
+Epoch 43, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [43/120][0/391]	LR: 0.026989	Loss 0.1421 (0.1421)	Top 1-acc 97.6562 (97.6562)	
+Epoch: [43/120][100/391]	LR: 0.026989	Loss 0.1298 (0.2091)	Top 1-acc 94.5312 (92.6825)	
+Epoch: [43/120][200/391]	LR: 0.026989	Loss 0.1534 (0.2148)	Top 1-acc 93.7500 (92.5334)	
+Epoch: [43/120][300/391]	LR: 0.026989	Loss 0.2159 (0.2214)	Top 1-acc 92.1875 (92.2446)	
+* Epoch: [43/120]	 Time 6.94064736366272	 Top 1-acc 92.262  	 Train Loss 0.221
+Test (on val set): [43/120][0/79]	Time 0.322 (0.322)	Loss 0.5127 (0.5127)	Top 1-acc 86.7188 (86.7188)	
+* Epoch: [43/120]	 Top 1-acc 88.500 	 Test Loss 0.398
+Val accuracy, current = 88.5, best = 89.86
+Epoch 44, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [44/120][0/391]	LR: 0.026179	Loss 0.2031 (0.2031)	Top 1-acc 91.4062 (91.4062)	
+Epoch: [44/120][100/391]	LR: 0.026179	Loss 0.2061 (0.2078)	Top 1-acc 92.1875 (92.5511)	
+Epoch: [44/120][200/391]	LR: 0.026179	Loss 0.1747 (0.2007)	Top 1-acc 93.7500 (92.9493)	
+Epoch: [44/120][300/391]	LR: 0.026179	Loss 0.1294 (0.2018)	Top 1-acc 96.0938 (92.9376)	
+* Epoch: [44/120]	 Time 6.831141710281372	 Top 1-acc 92.630  	 Train Loss 0.210
+Test (on val set): [44/120][0/79]	Time 0.329 (0.329)	Loss 0.2436 (0.2436)	Top 1-acc 92.9688 (92.9688)	
+* Epoch: [44/120]	 Top 1-acc 89.540 	 Test Loss 0.366
+Val accuracy, current = 89.54, best = 89.86
+Epoch 45, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [45/120][0/391]	LR: 0.025394	Loss 0.2048 (0.2048)	Top 1-acc 93.7500 (93.7500)	
+Epoch: [45/120][100/391]	LR: 0.025394	Loss 0.1149 (0.2023)	Top 1-acc 96.0938 (92.9378)	
+Epoch: [45/120][200/391]	LR: 0.025394	Loss 0.2944 (0.2070)	Top 1-acc 86.7188 (92.7122)	
+Epoch: [45/120][300/391]	LR: 0.025394	Loss 0.1133 (0.2132)	Top 1-acc 98.4375 (92.5016)	
+* Epoch: [45/120]	 Time 6.884400844573975	 Top 1-acc 92.428  	 Train Loss 0.215
+Test (on val set): [45/120][0/79]	Time 0.310 (0.310)	Loss 0.4473 (0.4473)	Top 1-acc 88.2812 (88.2812)	
+* Epoch: [45/120]	 Top 1-acc 89.000 	 Test Loss 0.392
+Val accuracy, current = 89.0, best = 89.86
+Epoch 46, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [46/120][0/391]	LR: 0.024632	Loss 0.1308 (0.1308)	Top 1-acc 96.8750 (96.8750)	
+Epoch: [46/120][100/391]	LR: 0.024632	Loss 0.2358 (0.2261)	Top 1-acc 92.9688 (92.1875)	
+Epoch: [46/120][200/391]	LR: 0.024632	Loss 0.1551 (0.2173)	Top 1-acc 93.7500 (92.5062)	
+Epoch: [46/120][300/391]	LR: 0.024632	Loss 0.1676 (0.2094)	Top 1-acc 95.3125 (92.6781)	
+* Epoch: [46/120]	 Time 6.818806409835815	 Top 1-acc 92.610  	 Train Loss 0.209
+Test (on val set): [46/120][0/79]	Time 0.305 (0.305)	Loss 0.4288 (0.4288)	Top 1-acc 89.0625 (89.0625)	
+* Epoch: [46/120]	 Top 1-acc 90.010 	 Test Loss 0.351
+Val accuracy, current = 90.01, best = 90.01
+Epoch 47, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [47/120][0/391]	LR: 0.023893	Loss 0.2068 (0.2068)	Top 1-acc 91.4062 (91.4062)	
+Epoch: [47/120][100/391]	LR: 0.023893	Loss 0.2333 (0.1980)	Top 1-acc 93.7500 (92.9301)	
+Epoch: [47/120][200/391]	LR: 0.023893	Loss 0.1996 (0.2026)	Top 1-acc 92.9688 (92.8560)	
+Epoch: [47/120][300/391]	LR: 0.023893	Loss 0.1547 (0.2070)	Top 1-acc 92.9688 (92.7300)	
+* Epoch: [47/120]	 Time 6.897074222564697	 Top 1-acc 92.750  	 Train Loss 0.208
+Test (on val set): [47/120][0/79]	Time 0.307 (0.307)	Loss 0.2591 (0.2591)	Top 1-acc 89.8438 (89.8438)	
+* Epoch: [47/120]	 Top 1-acc 90.480 	 Test Loss 0.322
+Val accuracy, current = 90.48, best = 90.48
+Epoch 48, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [48/120][0/391]	LR: 0.023176	Loss 0.2077 (0.2077)	Top 1-acc 92.9688 (92.9688)	
+Epoch: [48/120][100/391]	LR: 0.023176	Loss 0.1824 (0.1974)	Top 1-acc 95.3125 (93.2782)	
+Epoch: [48/120][200/391]	LR: 0.023176	Loss 0.1911 (0.1952)	Top 1-acc 91.4062 (93.3419)	
+Epoch: [48/120][300/391]	LR: 0.023176	Loss 0.1643 (0.2005)	Top 1-acc 92.9688 (93.1426)	
+* Epoch: [48/120]	 Time 6.7435479164123535	 Top 1-acc 93.120  	 Train Loss 0.199
+Test (on val set): [48/120][0/79]	Time 0.325 (0.325)	Loss 0.1297 (0.1297)	Top 1-acc 96.8750 (96.8750)	
+* Epoch: [48/120]	 Top 1-acc 90.860 	 Test Loss 0.302
+Val accuracy, current = 90.86, best = 90.86
+Epoch 49, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [49/120][0/391]	LR: 0.022481	Loss 0.2184 (0.2184)	Top 1-acc 93.7500 (93.7500)	
+Epoch: [49/120][100/391]	LR: 0.022481	Loss 0.2198 (0.1972)	Top 1-acc 92.1875 (93.1699)	
+Epoch: [49/120][200/391]	LR: 0.022481	Loss 0.2608 (0.1906)	Top 1-acc 89.8438 (93.4041)	
+Epoch: [49/120][300/391]	LR: 0.022481	Loss 0.1769 (0.1970)	Top 1-acc 95.3125 (93.2802)	
+* Epoch: [49/120]	 Time 6.8720927238464355	 Top 1-acc 93.164  	 Train Loss 0.200
+Test (on val set): [49/120][0/79]	Time 0.333 (0.333)	Loss 0.3231 (0.3231)	Top 1-acc 87.5000 (87.5000)	
+* Epoch: [49/120]	 Top 1-acc 89.710 	 Test Loss 0.355
+Val accuracy, current = 89.71, best = 90.86
+Epoch 50, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [50/120][0/391]	LR: 0.021807	Loss 0.2615 (0.2615)	Top 1-acc 90.6250 (90.6250)	
+Epoch: [50/120][100/391]	LR: 0.021807	Loss 0.7750 (0.1971)	Top 1-acc 72.6562 (93.2704)	
+Epoch: [50/120][200/391]	LR: 0.021807	Loss 0.2991 (0.1986)	Top 1-acc 87.5000 (93.2603)	
+Epoch: [50/120][300/391]	LR: 0.021807	Loss 0.1354 (0.1906)	Top 1-acc 95.3125 (93.4489)	
+* Epoch: [50/120]	 Time 6.916296005249023	 Top 1-acc 93.326  	 Train Loss 0.193
+Test (on val set): [50/120][0/79]	Time 0.327 (0.327)	Loss 0.3286 (0.3286)	Top 1-acc 86.7188 (86.7188)	
+* Epoch: [50/120]	 Top 1-acc 90.380 	 Test Loss 0.320
+Val accuracy, current = 90.38, best = 90.86
+Epoch 51, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [51/120][0/391]	LR: 0.021152	Loss 0.7810 (0.7810)	Top 1-acc 75.0000 (75.0000)	
+Epoch: [51/120][100/391]	LR: 0.021152	Loss 0.2119 (0.1735)	Top 1-acc 93.7500 (93.9356)	
+Epoch: [51/120][200/391]	LR: 0.021152	Loss 0.1360 (0.1796)	Top 1-acc 96.8750 (93.8472)	
+Epoch: [51/120][300/391]	LR: 0.021152	Loss 0.1113 (0.1763)	Top 1-acc 96.0938 (93.8798)	
+* Epoch: [51/120]	 Time 7.052599906921387	 Top 1-acc 93.856  	 Train Loss 0.176
+Test (on val set): [51/120][0/79]	Time 0.309 (0.309)	Loss 0.2216 (0.2216)	Top 1-acc 92.9688 (92.9688)	
+* Epoch: [51/120]	 Top 1-acc 89.050 	 Test Loss 0.384
+Val accuracy, current = 89.05, best = 90.86
+Epoch 52, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [52/120][0/391]	LR: 0.020518	Loss 0.1878 (0.1878)	Top 1-acc 92.9688 (92.9688)	
+Epoch: [52/120][100/391]	LR: 0.020518	Loss 0.6585 (0.1711)	Top 1-acc 74.2188 (94.1136)	
+Epoch: [52/120][200/391]	LR: 0.020518	Loss 0.1300 (0.1769)	Top 1-acc 95.3125 (93.7267)	
+Epoch: [52/120][300/391]	LR: 0.020518	Loss 0.2346 (0.1882)	Top 1-acc 91.4062 (93.3840)	
+* Epoch: [52/120]	 Time 6.977655410766602	 Top 1-acc 93.404  	 Train Loss 0.189
+Test (on val set): [52/120][0/79]	Time 0.332 (0.332)	Loss 0.3503 (0.3503)	Top 1-acc 89.8438 (89.8438)	
+* Epoch: [52/120]	 Top 1-acc 90.640 	 Test Loss 0.331
+Val accuracy, current = 90.64, best = 90.86
+Epoch 53, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [53/120][0/391]	LR: 0.019902	Loss 0.2303 (0.2303)	Top 1-acc 88.2812 (88.2812)	
+Epoch: [53/120][100/391]	LR: 0.019902	Loss 0.1561 (0.1739)	Top 1-acc 92.1875 (93.9588)	
+Epoch: [53/120][200/391]	LR: 0.019902	Loss 0.1853 (0.1752)	Top 1-acc 92.9688 (93.8472)	
+Epoch: [53/120][300/391]	LR: 0.019902	Loss 0.1259 (0.1681)	Top 1-acc 95.3125 (94.1653)	
+* Epoch: [53/120]	 Time 6.774320840835571	 Top 1-acc 94.176  	 Train Loss 0.166
+Test (on val set): [53/120][0/79]	Time 0.316 (0.316)	Loss 0.4013 (0.4013)	Top 1-acc 89.0625 (89.0625)	
+* Epoch: [53/120]	 Top 1-acc 90.220 	 Test Loss 0.359
+Val accuracy, current = 90.22, best = 90.86
+Epoch 54, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [54/120][0/391]	LR: 0.019305	Loss 0.1569 (0.1569)	Top 1-acc 92.9688 (92.9688)	
+Epoch: [54/120][100/391]	LR: 0.019305	Loss 0.2735 (0.1709)	Top 1-acc 89.0625 (94.0749)	
+Epoch: [54/120][200/391]	LR: 0.019305	Loss 0.2006 (0.1699)	Top 1-acc 92.9688 (94.1542)	
+Epoch: [54/120][300/391]	LR: 0.019305	Loss 0.1468 (0.1669)	Top 1-acc 93.7500 (94.1990)	
+* Epoch: [54/120]	 Time 7.063453674316406	 Top 1-acc 94.028  	 Train Loss 0.171
+Test (on val set): [54/120][0/79]	Time 0.327 (0.327)	Loss 0.5535 (0.5535)	Top 1-acc 89.8438 (89.8438)	
+* Epoch: [54/120]	 Top 1-acc 89.530 	 Test Loss 0.400
+Val accuracy, current = 89.53, best = 90.86
+Epoch 55, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [55/120][0/391]	LR: 0.018726	Loss 0.1202 (0.1202)	Top 1-acc 95.3125 (95.3125)	
+Epoch: [55/120][100/391]	LR: 0.018726	Loss 0.1719 (0.1542)	Top 1-acc 93.7500 (94.6937)	
+Epoch: [55/120][200/391]	LR: 0.018726	Loss 0.2013 (0.1608)	Top 1-acc 91.4062 (94.4768)	
+Epoch: [55/120][300/391]	LR: 0.018726	Loss 0.1420 (0.1623)	Top 1-acc 94.5312 (94.3937)	
+* Epoch: [55/120]	 Time 6.9125823974609375	 Top 1-acc 94.338  	 Train Loss 0.164
+Test (on val set): [55/120][0/79]	Time 0.304 (0.304)	Loss 0.5583 (0.5583)	Top 1-acc 87.5000 (87.5000)	
+* Epoch: [55/120]	 Top 1-acc 89.220 	 Test Loss 0.411
+Val accuracy, current = 89.22, best = 90.86
+Epoch 56, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [56/120][0/391]	LR: 0.018164	Loss 0.1462 (0.1462)	Top 1-acc 94.5312 (94.5312)	
+Epoch: [56/120][100/391]	LR: 0.018164	Loss 0.1239 (0.1574)	Top 1-acc 95.3125 (94.6086)	
+Epoch: [56/120][200/391]	LR: 0.018164	Loss 0.1591 (0.1658)	Top 1-acc 96.0938 (94.3252)	
+Epoch: [56/120][300/391]	LR: 0.018164	Loss 0.1257 (0.1620)	Top 1-acc 96.0938 (94.4041)	
+* Epoch: [56/120]	 Time 6.774866104125977	 Top 1-acc 94.390  	 Train Loss 0.162
+Test (on val set): [56/120][0/79]	Time 0.306 (0.306)	Loss 0.2598 (0.2598)	Top 1-acc 93.7500 (93.7500)	
+* Epoch: [56/120]	 Top 1-acc 88.980 	 Test Loss 0.417
+Val accuracy, current = 88.98, best = 90.86
+Epoch 57, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [57/120][0/391]	LR: 0.017619	Loss 0.1742 (0.1742)	Top 1-acc 95.3125 (95.3125)	
+Epoch: [57/120][100/391]	LR: 0.017619	Loss 0.1803 (0.1569)	Top 1-acc 93.7500 (94.5467)	
+Epoch: [57/120][200/391]	LR: 0.017619	Loss 0.0735 (0.1478)	Top 1-acc 99.2188 (94.9588)	
+Epoch: [57/120][300/391]	LR: 0.017619	Loss 0.0931 (0.1462)	Top 1-acc 96.0938 (94.9595)	
+* Epoch: [57/120]	 Time 6.873032569885254	 Top 1-acc 94.820  	 Train Loss 0.151
+Test (on val set): [57/120][0/79]	Time 0.313 (0.313)	Loss 0.2821 (0.2821)	Top 1-acc 91.4062 (91.4062)	
+* Epoch: [57/120]	 Top 1-acc 91.160 	 Test Loss 0.321
+Val accuracy, current = 91.16, best = 91.16
+Epoch 58, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [58/120][0/391]	LR: 0.017091	Loss 0.2354 (0.2354)	Top 1-acc 92.1875 (92.1875)	
+Epoch: [58/120][100/391]	LR: 0.017091	Loss 0.1073 (0.1592)	Top 1-acc 96.0938 (94.4771)	
+Epoch: [58/120][200/391]	LR: 0.017091	Loss 0.0932 (0.1612)	Top 1-acc 96.8750 (94.3991)	
+Epoch: [58/120][300/391]	LR: 0.017091	Loss 0.4000 (0.1637)	Top 1-acc 86.7188 (94.3314)	
+* Epoch: [58/120]	 Time 6.849738597869873	 Top 1-acc 94.328  	 Train Loss 0.163
+Test (on val set): [58/120][0/79]	Time 0.321 (0.321)	Loss 0.4266 (0.4266)	Top 1-acc 86.7188 (86.7188)	
+* Epoch: [58/120]	 Top 1-acc 90.690 	 Test Loss 0.340
+Val accuracy, current = 90.69, best = 91.16
+Epoch 59, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [59/120][0/391]	LR: 0.016578	Loss 0.1105 (0.1105)	Top 1-acc 95.3125 (95.3125)	
+Epoch: [59/120][100/391]	LR: 0.016578	Loss 0.1418 (0.1651)	Top 1-acc 97.6562 (94.3533)	
+Epoch: [59/120][200/391]	LR: 0.016578	Loss 0.1993 (0.1630)	Top 1-acc 93.7500 (94.4030)	
+Epoch: [59/120][300/391]	LR: 0.016578	Loss 0.0866 (0.1620)	Top 1-acc 96.0938 (94.4300)	
+* Epoch: [59/120]	 Time 6.824998378753662	 Top 1-acc 94.432  	 Train Loss 0.162
+Test (on val set): [59/120][0/79]	Time 0.312 (0.312)	Loss 0.2487 (0.2487)	Top 1-acc 92.1875 (92.1875)	
+* Epoch: [59/120]	 Top 1-acc 90.980 	 Test Loss 0.324
+Val accuracy, current = 90.98, best = 91.16
+Epoch 60, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [60/120][0/391]	LR: 0.016081	Loss 0.1019 (0.1019)	Top 1-acc 96.8750 (96.8750)	
+Epoch: [60/120][100/391]	LR: 0.016081	Loss 0.7151 (0.1437)	Top 1-acc 79.6875 (94.9722)	
+Epoch: [60/120][200/391]	LR: 0.016081	Loss 0.1698 (0.1408)	Top 1-acc 95.3125 (95.1259)	
+Epoch: [60/120][300/391]	LR: 0.016081	Loss 0.1447 (0.1516)	Top 1-acc 95.3125 (94.6480)	
+* Epoch: [60/120]	 Time 6.839860916137695	 Top 1-acc 94.510  	 Train Loss 0.157
+Test (on val set): [60/120][0/79]	Time 0.328 (0.328)	Loss 0.5542 (0.5542)	Top 1-acc 85.9375 (85.9375)	
+* Epoch: [60/120]	 Top 1-acc 90.380 	 Test Loss 0.356
+Val accuracy, current = 90.38, best = 91.16
+Epoch 61, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [61/120][0/391]	LR: 0.015598	Loss 0.0973 (0.0973)	Top 1-acc 97.6562 (97.6562)	
+Epoch: [61/120][100/391]	LR: 0.015598	Loss 0.1000 (0.1421)	Top 1-acc 95.3125 (95.2429)	
+Epoch: [61/120][200/391]	LR: 0.015598	Loss 0.1127 (0.1423)	Top 1-acc 95.3125 (95.1531)	
+Epoch: [61/120][300/391]	LR: 0.015598	Loss 0.1692 (0.1488)	Top 1-acc 94.5312 (94.9543)	
+* Epoch: [61/120]	 Time 6.908562421798706	 Top 1-acc 94.896  	 Train Loss 0.150
+Test (on val set): [61/120][0/79]	Time 0.316 (0.316)	Loss 0.4812 (0.4812)	Top 1-acc 88.2812 (88.2812)	
+* Epoch: [61/120]	 Top 1-acc 91.190 	 Test Loss 0.323
+Val accuracy, current = 91.19, best = 91.19
+Epoch 62, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [62/120][0/391]	LR: 0.015130	Loss 0.1068 (0.1068)	Top 1-acc 96.0938 (96.0938)	
+Epoch: [62/120][100/391]	LR: 0.015130	Loss 0.1550 (0.1365)	Top 1-acc 92.1875 (95.5213)	
+Epoch: [62/120][200/391]	LR: 0.015130	Loss 0.0849 (0.1426)	Top 1-acc 96.0938 (95.0832)	
+Epoch: [62/120][300/391]	LR: 0.015130	Loss 0.1139 (0.1511)	Top 1-acc 95.3125 (94.7674)	
+* Epoch: [62/120]	 Time 6.869290828704834	 Top 1-acc 94.808  	 Train Loss 0.148
+Test (on val set): [62/120][0/79]	Time 0.334 (0.334)	Loss 0.4824 (0.4824)	Top 1-acc 86.7188 (86.7188)	
+* Epoch: [62/120]	 Top 1-acc 90.810 	 Test Loss 0.336
+Val accuracy, current = 90.81, best = 91.19
+Epoch 63, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [63/120][0/391]	LR: 0.014676	Loss 0.1072 (0.1072)	Top 1-acc 96.8750 (96.8750)	
+Epoch: [63/120][100/391]	LR: 0.014676	Loss 0.1142 (0.1345)	Top 1-acc 97.6562 (95.4285)	
+Epoch: [63/120][200/391]	LR: 0.014676	Loss 0.1114 (0.1429)	Top 1-acc 96.0938 (95.1337)	
+Epoch: [63/120][300/391]	LR: 0.014676	Loss 0.0522 (0.1398)	Top 1-acc 99.2188 (95.2217)	
+* Epoch: [63/120]	 Time 6.712966680526733	 Top 1-acc 95.134  	 Train Loss 0.143
+Test (on val set): [63/120][0/79]	Time 0.312 (0.312)	Loss 0.4550 (0.4550)	Top 1-acc 86.7188 (86.7188)	
+* Epoch: [63/120]	 Top 1-acc 89.580 	 Test Loss 0.393
+Val accuracy, current = 89.58, best = 91.19
+Epoch 64, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [64/120][0/391]	LR: 0.014236	Loss 0.1436 (0.1436)	Top 1-acc 95.3125 (95.3125)	
+Epoch: [64/120][100/391]	LR: 0.014236	Loss 0.3652 (0.1420)	Top 1-acc 86.7188 (95.0340)	
+Epoch: [64/120][200/391]	LR: 0.014236	Loss 0.1839 (0.1455)	Top 1-acc 92.9688 (95.0210)	
+Epoch: [64/120][300/391]	LR: 0.014236	Loss 0.1230 (0.1418)	Top 1-acc 97.6562 (95.1620)	
+* Epoch: [64/120]	 Time 6.948357820510864	 Top 1-acc 95.188  	 Train Loss 0.140
+Test (on val set): [64/120][0/79]	Time 0.327 (0.327)	Loss 0.4268 (0.4268)	Top 1-acc 89.8438 (89.8438)	
+* Epoch: [64/120]	 Top 1-acc 89.950 	 Test Loss 0.375
+Val accuracy, current = 89.95, best = 91.19
+Epoch 65, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [65/120][0/391]	LR: 0.013809	Loss 0.0633 (0.0633)	Top 1-acc 97.6562 (97.6562)	
+Epoch: [65/120][100/391]	LR: 0.013809	Loss 0.0628 (0.1323)	Top 1-acc 96.8750 (95.5213)	
+Epoch: [65/120][200/391]	LR: 0.013809	Loss 0.5113 (0.1352)	Top 1-acc 83.5938 (95.4641)	
+Epoch: [65/120][300/391]	LR: 0.013809	Loss 0.1897 (0.1367)	Top 1-acc 94.5312 (95.3021)	
+* Epoch: [65/120]	 Time 6.8184590339660645	 Top 1-acc 95.196  	 Train Loss 0.138
+Test (on val set): [65/120][0/79]	Time 0.325 (0.325)	Loss 0.5251 (0.5251)	Top 1-acc 85.9375 (85.9375)	
+* Epoch: [65/120]	 Top 1-acc 90.660 	 Test Loss 0.358
+Val accuracy, current = 90.66, best = 91.19
+Epoch 66, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [66/120][0/391]	LR: 0.013395	Loss 0.1401 (0.1401)	Top 1-acc 95.3125 (95.3125)	
+Epoch: [66/120][100/391]	LR: 0.013395	Loss 0.0513 (0.1224)	Top 1-acc 98.4375 (95.8230)	
+Epoch: [66/120][200/391]	LR: 0.013395	Loss 0.1049 (0.1238)	Top 1-acc 95.3125 (95.7906)	
+Epoch: [66/120][300/391]	LR: 0.013395	Loss 0.0973 (0.1246)	Top 1-acc 96.8750 (95.7771)	
+* Epoch: [66/120]	 Time 6.910207509994507	 Top 1-acc 95.588  	 Train Loss 0.130
+Test (on val set): [66/120][0/79]	Time 0.323 (0.323)	Loss 0.3567 (0.3567)	Top 1-acc 91.4062 (91.4062)	
+* Epoch: [66/120]	 Top 1-acc 91.000 	 Test Loss 0.335
+Val accuracy, current = 91.0, best = 91.19
+Epoch 67, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [67/120][0/391]	LR: 0.012993	Loss 0.0722 (0.0722)	Top 1-acc 97.6562 (97.6562)	
+Epoch: [67/120][100/391]	LR: 0.012993	Loss 0.5186 (0.1394)	Top 1-acc 82.8125 (95.0650)	
+Epoch: [67/120][200/391]	LR: 0.012993	Loss 0.1355 (0.1384)	Top 1-acc 94.5312 (95.1415)	
+Epoch: [67/120][300/391]	LR: 0.012993	Loss 0.1154 (0.1329)	Top 1-acc 97.6562 (95.3618)	
+* Epoch: [67/120]	 Time 6.752366542816162	 Top 1-acc 95.556  	 Train Loss 0.127
+Test (on val set): [67/120][0/79]	Time 0.309 (0.309)	Loss 0.4058 (0.4058)	Top 1-acc 93.7500 (93.7500)	
+* Epoch: [67/120]	 Top 1-acc 90.290 	 Test Loss 0.374
+Val accuracy, current = 90.29, best = 91.19
+Epoch 68, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [68/120][0/391]	LR: 0.012603	Loss 0.1174 (0.1174)	Top 1-acc 96.0938 (96.0938)	
+Epoch: [68/120][100/391]	LR: 0.012603	Loss 0.0531 (0.1164)	Top 1-acc 99.2188 (96.0473)	
+Epoch: [68/120][200/391]	LR: 0.012603	Loss 0.1102 (0.1227)	Top 1-acc 96.0938 (95.7439)	
+Epoch: [68/120][300/391]	LR: 0.012603	Loss 0.1052 (0.1241)	Top 1-acc 96.0938 (95.6759)	
+* Epoch: [68/120]	 Time 6.781384229660034	 Top 1-acc 95.480  	 Train Loss 0.129
+Test (on val set): [68/120][0/79]	Time 0.315 (0.315)	Loss 0.3738 (0.3738)	Top 1-acc 91.4062 (91.4062)	
+* Epoch: [68/120]	 Top 1-acc 88.550 	 Test Loss 0.444
+Val accuracy, current = 88.55, best = 91.19
+Epoch 69, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [69/120][0/391]	LR: 0.012225	Loss 0.0617 (0.0617)	Top 1-acc 97.6562 (97.6562)	
+Epoch: [69/120][100/391]	LR: 0.012225	Loss 0.1187 (0.1099)	Top 1-acc 95.3125 (96.2330)	
+Epoch: [69/120][200/391]	LR: 0.012225	Loss 0.1346 (0.1244)	Top 1-acc 96.0938 (95.7245)	
+Epoch: [69/120][300/391]	LR: 0.012225	Loss 0.1455 (0.1231)	Top 1-acc 95.3125 (95.7511)	
+* Epoch: [69/120]	 Time 6.695190191268921	 Top 1-acc 95.526  	 Train Loss 0.129
+Test (on val set): [69/120][0/79]	Time 0.310 (0.310)	Loss 0.7396 (0.7396)	Top 1-acc 85.9375 (85.9375)	
+* Epoch: [69/120]	 Top 1-acc 88.440 	 Test Loss 0.468
+Val accuracy, current = 88.44, best = 91.19
+Epoch 70, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [70/120][0/391]	LR: 0.011858	Loss 0.1480 (0.1480)	Top 1-acc 96.0938 (96.0938)	
+Epoch: [70/120][100/391]	LR: 0.011858	Loss 0.5061 (0.1281)	Top 1-acc 85.1562 (95.7921)	
+Epoch: [70/120][200/391]	LR: 0.011858	Loss 0.1272 (0.1204)	Top 1-acc 95.3125 (95.9111)	
+Epoch: [70/120][300/391]	LR: 0.011858	Loss 0.1128 (0.1269)	Top 1-acc 95.3125 (95.7226)	
+* Epoch: [70/120]	 Time 6.75479531288147	 Top 1-acc 95.684  	 Train Loss 0.127
+Test (on val set): [70/120][0/79]	Time 0.319 (0.319)	Loss 0.6123 (0.6123)	Top 1-acc 88.2812 (88.2812)	
+* Epoch: [70/120]	 Top 1-acc 91.000 	 Test Loss 0.348
+Val accuracy, current = 91.0, best = 91.19
+Epoch 71, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [71/120][0/391]	LR: 0.011503	Loss 0.1302 (0.1302)	Top 1-acc 96.8750 (96.8750)	
+Epoch: [71/120][100/391]	LR: 0.011503	Loss 0.1684 (0.1206)	Top 1-acc 94.5312 (96.0087)	
+Epoch: [71/120][200/391]	LR: 0.011503	Loss 0.0965 (0.1207)	Top 1-acc 96.8750 (95.9344)	
+Epoch: [71/120][300/391]	LR: 0.011503	Loss 0.0970 (0.1260)	Top 1-acc 96.8750 (95.7382)	
+* Epoch: [71/120]	 Time 6.805023908615112	 Top 1-acc 95.626  	 Train Loss 0.130
+Test (on val set): [71/120][0/79]	Time 0.319 (0.319)	Loss 0.3291 (0.3291)	Top 1-acc 89.8438 (89.8438)	
+* Epoch: [71/120]	 Top 1-acc 90.210 	 Test Loss 0.377
+Val accuracy, current = 90.21, best = 91.19
+Epoch 72, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [72/120][0/391]	LR: 0.011157	Loss 0.4787 (0.4787)	Top 1-acc 83.5938 (83.5938)	
+Epoch: [72/120][100/391]	LR: 0.011157	Loss 0.2274 (0.1304)	Top 1-acc 92.1875 (95.4285)	
+Epoch: [72/120][200/391]	LR: 0.011157	Loss 0.1442 (0.1183)	Top 1-acc 95.3125 (95.9305)	
+Epoch: [72/120][300/391]	LR: 0.011157	Loss 0.1306 (0.1133)	Top 1-acc 96.8750 (96.0886)	
+* Epoch: [72/120]	 Time 6.830092668533325	 Top 1-acc 96.242  	 Train Loss 0.110
+Test (on val set): [72/120][0/79]	Time 0.301 (0.301)	Loss 0.2771 (0.2771)	Top 1-acc 94.5312 (94.5312)	
+* Epoch: [72/120]	 Top 1-acc 90.630 	 Test Loss 0.359
+Val accuracy, current = 90.63, best = 91.19
+Epoch 73, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [73/120][0/391]	LR: 0.010823	Loss 0.0802 (0.0802)	Top 1-acc 96.8750 (96.8750)	
+Epoch: [73/120][100/391]	LR: 0.010823	Loss 0.1390 (0.1099)	Top 1-acc 95.3125 (96.3800)	
+Epoch: [73/120][200/391]	LR: 0.010823	Loss 0.0786 (0.1055)	Top 1-acc 97.6562 (96.3270)	
+Epoch: [73/120][300/391]	LR: 0.010823	Loss 0.0550 (0.1069)	Top 1-acc 98.4375 (96.2936)	
+* Epoch: [73/120]	 Time 6.86232852935791	 Top 1-acc 96.106  	 Train Loss 0.112
+Test (on val set): [73/120][0/79]	Time 0.326 (0.326)	Loss 0.3281 (0.3281)	Top 1-acc 90.6250 (90.6250)	
+* Epoch: [73/120]	 Top 1-acc 91.510 	 Test Loss 0.328
+Val accuracy, current = 91.51, best = 91.51
+Epoch 74, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [74/120][0/391]	LR: 0.010498	Loss 0.0671 (0.0671)	Top 1-acc 96.8750 (96.8750)	
+Epoch: [74/120][100/391]	LR: 0.010498	Loss 0.0798 (0.1042)	Top 1-acc 97.6562 (96.5424)	
+Epoch: [74/120][200/391]	LR: 0.010498	Loss 0.1134 (0.1038)	Top 1-acc 96.8750 (96.5368)	
+Epoch: [74/120][300/391]	LR: 0.010498	Loss 0.1016 (0.1063)	Top 1-acc 97.6562 (96.4182)	
+* Epoch: [74/120]	 Time 6.751866102218628	 Top 1-acc 96.304  	 Train Loss 0.110
+Test (on val set): [74/120][0/79]	Time 0.335 (0.335)	Loss 0.1449 (0.1449)	Top 1-acc 94.5312 (94.5312)	
+* Epoch: [74/120]	 Top 1-acc 91.030 	 Test Loss 0.344
+Val accuracy, current = 91.03, best = 91.51
+Epoch 75, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [75/120][0/391]	LR: 0.010183	Loss 0.1061 (0.1061)	Top 1-acc 97.6562 (97.6562)	
+Epoch: [75/120][100/391]	LR: 0.010183	Loss 0.1116 (0.0954)	Top 1-acc 96.8750 (96.8441)	
+Epoch: [75/120][200/391]	LR: 0.010183	Loss 0.0781 (0.1031)	Top 1-acc 97.6562 (96.5563)	
+Epoch: [75/120][300/391]	LR: 0.010183	Loss 0.5134 (0.1067)	Top 1-acc 82.0312 (96.3663)	
+* Epoch: [75/120]	 Time 6.598276138305664	 Top 1-acc 96.322  	 Train Loss 0.109
+Test (on val set): [75/120][0/79]	Time 0.327 (0.327)	Loss 0.4034 (0.4034)	Top 1-acc 85.9375 (85.9375)	
+* Epoch: [75/120]	 Top 1-acc 91.800 	 Test Loss 0.315
+Val accuracy, current = 91.8, best = 91.8
+Epoch 76, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [76/120][0/391]	LR: 0.009878	Loss 0.1074 (0.1074)	Top 1-acc 95.3125 (95.3125)	
+Epoch: [76/120][100/391]	LR: 0.009878	Loss 0.0967 (0.1068)	Top 1-acc 96.8750 (96.3103)	
+Epoch: [76/120][200/391]	LR: 0.009878	Loss 0.0773 (0.1024)	Top 1-acc 96.8750 (96.4241)	
+Epoch: [76/120][300/391]	LR: 0.009878	Loss 0.0836 (0.1005)	Top 1-acc 96.0938 (96.5116)	
+* Epoch: [76/120]	 Time 7.087182998657227	 Top 1-acc 96.474  	 Train Loss 0.102
+Test (on val set): [76/120][0/79]	Time 0.317 (0.317)	Loss 0.8426 (0.8426)	Top 1-acc 87.5000 (87.5000)	
+* Epoch: [76/120]	 Top 1-acc 90.870 	 Test Loss 0.369
+Val accuracy, current = 90.87, best = 91.8
+Epoch 77, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [77/120][0/391]	LR: 0.009581	Loss 0.0699 (0.0699)	Top 1-acc 96.8750 (96.8750)	
+Epoch: [77/120][100/391]	LR: 0.009581	Loss 0.1150 (0.1048)	Top 1-acc 95.3125 (96.4573)	
+Epoch: [77/120][200/391]	LR: 0.009581	Loss 0.0801 (0.1112)	Top 1-acc 98.4375 (96.2259)	
+Epoch: [77/120][300/391]	LR: 0.009581	Loss 0.1062 (0.1133)	Top 1-acc 96.8750 (96.1249)	
+* Epoch: [77/120]	 Time 6.720530271530151	 Top 1-acc 95.966  	 Train Loss 0.117
+Test (on val set): [77/120][0/79]	Time 0.308 (0.308)	Loss 0.3069 (0.3069)	Top 1-acc 89.8438 (89.8438)	
+* Epoch: [77/120]	 Top 1-acc 90.210 	 Test Loss 0.396
+Val accuracy, current = 90.21, best = 91.8
+Epoch 78, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [78/120][0/391]	LR: 0.009294	Loss 0.0305 (0.0305)	Top 1-acc 99.2188 (99.2188)	
+Epoch: [78/120][100/391]	LR: 0.009294	Loss 0.1292 (0.1043)	Top 1-acc 96.0938 (96.4960)	
+Epoch: [78/120][200/391]	LR: 0.009294	Loss 0.0669 (0.1090)	Top 1-acc 96.8750 (96.2453)	
+Epoch: [78/120][300/391]	LR: 0.009294	Loss 0.0757 (0.1041)	Top 1-acc 98.4375 (96.5012)	
+* Epoch: [78/120]	 Time 6.696309566497803	 Top 1-acc 96.362  	 Train Loss 0.107
+Test (on val set): [78/120][0/79]	Time 0.325 (0.325)	Loss 0.4141 (0.4141)	Top 1-acc 89.8438 (89.8438)	
+* Epoch: [78/120]	 Top 1-acc 90.010 	 Test Loss 0.388
+Val accuracy, current = 90.01, best = 91.8
+Epoch 79, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [79/120][0/391]	LR: 0.009015	Loss 0.1397 (0.1397)	Top 1-acc 94.5312 (94.5312)	
+Epoch: [79/120][100/391]	LR: 0.009015	Loss 0.0935 (0.1042)	Top 1-acc 96.8750 (96.3877)	
+Epoch: [79/120][200/391]	LR: 0.009015	Loss 0.0504 (0.0969)	Top 1-acc 98.4375 (96.7273)	
+Epoch: [79/120][300/391]	LR: 0.009015	Loss 0.1124 (0.0975)	Top 1-acc 96.8750 (96.6933)	
+* Epoch: [79/120]	 Time 6.889682769775391	 Top 1-acc 96.750  	 Train Loss 0.095
+Test (on val set): [79/120][0/79]	Time 0.338 (0.338)	Loss 0.3263 (0.3263)	Top 1-acc 92.1875 (92.1875)	
+* Epoch: [79/120]	 Top 1-acc 91.450 	 Test Loss 0.337
+Val accuracy, current = 91.45, best = 91.8
+Epoch 80, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [80/120][0/391]	LR: 0.008745	Loss 0.0569 (0.0569)	Top 1-acc 97.6562 (97.6562)	
+Epoch: [80/120][100/391]	LR: 0.008745	Loss 0.1651 (0.0898)	Top 1-acc 93.7500 (96.9137)	
+Epoch: [80/120][200/391]	LR: 0.008745	Loss 0.1143 (0.0959)	Top 1-acc 96.0938 (96.7428)	
+Epoch: [80/120][300/391]	LR: 0.008745	Loss 0.0774 (0.0985)	Top 1-acc 97.6562 (96.6232)	
+* Epoch: [80/120]	 Time 6.811185121536255	 Top 1-acc 96.646  	 Train Loss 0.098
+Test (on val set): [80/120][0/79]	Time 0.322 (0.322)	Loss 0.5294 (0.5294)	Top 1-acc 85.1562 (85.1562)	
+* Epoch: [80/120]	 Top 1-acc 91.180 	 Test Loss 0.345
+Val accuracy, current = 91.18, best = 91.8
+Epoch 81, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [81/120][0/391]	LR: 0.008482	Loss 0.0499 (0.0499)	Top 1-acc 98.4375 (98.4375)	
+Epoch: [81/120][100/391]	LR: 0.008482	Loss 0.0501 (0.0790)	Top 1-acc 100.0000 (97.3623)	
+Epoch: [81/120][200/391]	LR: 0.008482	Loss 0.0881 (0.0896)	Top 1-acc 96.8750 (96.9566)	
+Epoch: [81/120][300/391]	LR: 0.008482	Loss 0.1768 (0.0952)	Top 1-acc 95.3125 (96.7634)	
+* Epoch: [81/120]	 Time 6.696758031845093	 Top 1-acc 96.596  	 Train Loss 0.101
+Test (on val set): [81/120][0/79]	Time 0.306 (0.306)	Loss 0.6775 (0.6775)	Top 1-acc 85.9375 (85.9375)	
+* Epoch: [81/120]	 Top 1-acc 89.360 	 Test Loss 0.436
+Val accuracy, current = 89.36, best = 91.8
+Epoch 82, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [82/120][0/391]	LR: 0.008228	Loss 0.0817 (0.0817)	Top 1-acc 95.3125 (95.3125)	
+Epoch: [82/120][100/391]	LR: 0.008228	Loss 0.0640 (0.0839)	Top 1-acc 98.4375 (97.1767)	
+Epoch: [82/120][200/391]	LR: 0.008228	Loss 0.0388 (0.0861)	Top 1-acc 99.2188 (97.0460)	
+Epoch: [82/120][300/391]	LR: 0.008228	Loss 0.0745 (0.0879)	Top 1-acc 95.3125 (97.0463)	
+* Epoch: [82/120]	 Time 6.707382678985596	 Top 1-acc 96.960  	 Train Loss 0.089
+Test (on val set): [82/120][0/79]	Time 0.315 (0.315)	Loss 0.2454 (0.2454)	Top 1-acc 92.9688 (92.9688)	
+* Epoch: [82/120]	 Top 1-acc 91.360 	 Test Loss 0.344
+Val accuracy, current = 91.36, best = 91.8
+Epoch 83, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [83/120][0/391]	LR: 0.007981	Loss 0.1485 (0.1485)	Top 1-acc 96.0938 (96.0938)	
+Epoch: [83/120][100/391]	LR: 0.007981	Loss 0.0890 (0.0889)	Top 1-acc 96.8750 (97.0452)	
+Epoch: [83/120][200/391]	LR: 0.007981	Loss 0.0352 (0.0897)	Top 1-acc 100.0000 (97.0732)	
+Epoch: [83/120][300/391]	LR: 0.007981	Loss 0.0772 (0.0921)	Top 1-acc 96.8750 (96.9010)	
+* Epoch: [83/120]	 Time 6.654696226119995	 Top 1-acc 96.820  	 Train Loss 0.094
+Test (on val set): [83/120][0/79]	Time 0.314 (0.314)	Loss 0.4626 (0.4626)	Top 1-acc 86.7188 (86.7188)	
+* Epoch: [83/120]	 Top 1-acc 92.090 	 Test Loss 0.313
+Val accuracy, current = 92.09, best = 92.09
+Epoch 84, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [84/120][0/391]	LR: 0.007742	Loss 0.1018 (0.1018)	Top 1-acc 96.8750 (96.8750)	
+Epoch: [84/120][100/391]	LR: 0.007742	Loss 0.0671 (0.0846)	Top 1-acc 96.8750 (97.1535)	
+Epoch: [84/120][200/391]	LR: 0.007742	Loss 0.0538 (0.0862)	Top 1-acc 99.2188 (97.1082)	
+Epoch: [84/120][300/391]	LR: 0.007742	Loss 0.0922 (0.0939)	Top 1-acc 95.3125 (96.8309)	
+* Epoch: [84/120]	 Time 6.6420464515686035	 Top 1-acc 96.664  	 Train Loss 0.098
+Test (on val set): [84/120][0/79]	Time 0.315 (0.315)	Loss 0.2749 (0.2749)	Top 1-acc 91.4062 (91.4062)	
+* Epoch: [84/120]	 Top 1-acc 92.250 	 Test Loss 0.311
+Val accuracy, current = 92.25, best = 92.25
+Epoch 85, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [85/120][0/391]	LR: 0.007509	Loss 0.0381 (0.0381)	Top 1-acc 99.2188 (99.2188)	
+Epoch: [85/120][100/391]	LR: 0.007509	Loss 0.0781 (0.0819)	Top 1-acc 97.6562 (97.0916)	
+Epoch: [85/120][200/391]	LR: 0.007509	Loss 0.5807 (0.0880)	Top 1-acc 76.5625 (97.0305)	
+Epoch: [85/120][300/391]	LR: 0.007509	Loss 0.0975 (0.0891)	Top 1-acc 98.4375 (96.9736)	
+* Epoch: [85/120]	 Time 6.841720819473267	 Top 1-acc 96.916  	 Train Loss 0.091
+Test (on val set): [85/120][0/79]	Time 0.322 (0.322)	Loss 0.3972 (0.3972)	Top 1-acc 90.6250 (90.6250)	
+* Epoch: [85/120]	 Top 1-acc 90.800 	 Test Loss 0.370
+Val accuracy, current = 90.8, best = 92.25
+Epoch 86, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [86/120][0/391]	LR: 0.007284	Loss 0.0534 (0.0534)	Top 1-acc 98.4375 (98.4375)	
+Epoch: [86/120][100/391]	LR: 0.007284	Loss 0.1264 (0.0904)	Top 1-acc 94.5312 (96.8518)	
+Epoch: [86/120][200/391]	LR: 0.007284	Loss 0.0585 (0.0941)	Top 1-acc 97.6562 (96.6573)	
+Epoch: [86/120][300/391]	LR: 0.007284	Loss 0.1068 (0.0902)	Top 1-acc 96.8750 (96.8439)	
+* Epoch: [86/120]	 Time 6.854087591171265	 Top 1-acc 96.838  	 Train Loss 0.092
+Test (on val set): [86/120][0/79]	Time 0.317 (0.317)	Loss 0.3059 (0.3059)	Top 1-acc 93.7500 (93.7500)	
+* Epoch: [86/120]	 Top 1-acc 90.470 	 Test Loss 0.391
+Val accuracy, current = 90.47, best = 92.25
+Epoch 87, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [87/120][0/391]	LR: 0.007065	Loss 0.0658 (0.0658)	Top 1-acc 97.6562 (97.6562)	
+Epoch: [87/120][100/391]	LR: 0.007065	Loss 0.0411 (0.0851)	Top 1-acc 98.4375 (97.2231)	
+Epoch: [87/120][200/391]	LR: 0.007065	Loss 0.0463 (0.0820)	Top 1-acc 98.4375 (97.2870)	
+Epoch: [87/120][300/391]	LR: 0.007065	Loss 0.0431 (0.0851)	Top 1-acc 99.2188 (97.1735)	
+* Epoch: [87/120]	 Time 6.830011367797852	 Top 1-acc 96.984  	 Train Loss 0.090
+Test (on val set): [87/120][0/79]	Time 0.391 (0.391)	Loss 0.3101 (0.3101)	Top 1-acc 90.6250 (90.6250)	
+* Epoch: [87/120]	 Top 1-acc 90.820 	 Test Loss 0.373
+Val accuracy, current = 90.82, best = 92.25
+Epoch 88, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [88/120][0/391]	LR: 0.006854	Loss 0.3704 (0.3704)	Top 1-acc 89.0625 (89.0625)	
+Epoch: [88/120][100/391]	LR: 0.006854	Loss 0.0213 (0.1024)	Top 1-acc 100.0000 (96.5579)	
+Epoch: [88/120][200/391]	LR: 0.006854	Loss 0.0484 (0.0979)	Top 1-acc 97.6562 (96.7001)	
+Epoch: [88/120][300/391]	LR: 0.006854	Loss 0.5067 (0.0971)	Top 1-acc 87.5000 (96.7322)	
+* Epoch: [88/120]	 Time 6.878216743469238	 Top 1-acc 96.794  	 Train Loss 0.095
+Test (on val set): [88/120][0/79]	Time 0.322 (0.322)	Loss 0.1499 (0.1499)	Top 1-acc 95.3125 (95.3125)	
+* Epoch: [88/120]	 Top 1-acc 92.300 	 Test Loss 0.305
+Val accuracy, current = 92.3, best = 92.3
+Epoch 89, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [89/120][0/391]	LR: 0.006648	Loss 0.0958 (0.0958)	Top 1-acc 98.4375 (98.4375)	
+Epoch: [89/120][100/391]	LR: 0.006648	Loss 0.0630 (0.0750)	Top 1-acc 97.6562 (97.6562)	
+Epoch: [89/120][200/391]	LR: 0.006648	Loss 0.0304 (0.0749)	Top 1-acc 99.2188 (97.5824)	
+Epoch: [89/120][300/391]	LR: 0.006648	Loss 0.0503 (0.0734)	Top 1-acc 99.2188 (97.5732)	
+* Epoch: [89/120]	 Time 6.894588947296143	 Top 1-acc 97.366  	 Train Loss 0.079
+Test (on val set): [89/120][0/79]	Time 0.327 (0.327)	Loss 0.1889 (0.1889)	Top 1-acc 95.3125 (95.3125)	
+* Epoch: [89/120]	 Top 1-acc 91.840 	 Test Loss 0.322
+Val accuracy, current = 91.84, best = 92.3
+Epoch 90, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [90/120][0/391]	LR: 0.006448	Loss 0.0417 (0.0417)	Top 1-acc 98.4375 (98.4375)	
+Epoch: [90/120][100/391]	LR: 0.006448	Loss 0.0453 (0.0891)	Top 1-acc 98.4375 (97.1303)	
+Epoch: [90/120][200/391]	LR: 0.006448	Loss 0.0271 (0.0843)	Top 1-acc 100.0000 (97.2248)	
+Epoch: [90/120][300/391]	LR: 0.006448	Loss 0.0314 (0.0873)	Top 1-acc 99.2188 (97.1216)	
+* Epoch: [90/120]	 Time 6.917384624481201	 Top 1-acc 97.176  	 Train Loss 0.087
+Test (on val set): [90/120][0/79]	Time 0.331 (0.331)	Loss 0.2637 (0.2637)	Top 1-acc 92.9688 (92.9688)	
+* Epoch: [90/120]	 Top 1-acc 92.050 	 Test Loss 0.325
+Val accuracy, current = 92.05, best = 92.3
+Epoch 91, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [91/120][0/391]	LR: 0.006255	Loss 0.0912 (0.0912)	Top 1-acc 96.8750 (96.8750)	
+Epoch: [91/120][100/391]	LR: 0.006255	Loss 0.0364 (0.0860)	Top 1-acc 100.0000 (97.1535)	
+Epoch: [91/120][200/391]	LR: 0.006255	Loss 0.0574 (0.0845)	Top 1-acc 98.4375 (97.1821)	
+Epoch: [91/120][300/391]	LR: 0.006255	Loss 0.0330 (0.0919)	Top 1-acc 98.4375 (96.9321)	
+* Epoch: [91/120]	 Time 6.934684753417969	 Top 1-acc 96.866  	 Train Loss 0.092
+Test (on val set): [91/120][0/79]	Time 0.337 (0.337)	Loss 0.3457 (0.3457)	Top 1-acc 92.1875 (92.1875)	
+* Epoch: [91/120]	 Top 1-acc 92.020 	 Test Loss 0.316
+Val accuracy, current = 92.02, best = 92.3
+Epoch 92, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [92/120][0/391]	LR: 0.006067	Loss 0.0535 (0.0535)	Top 1-acc 98.4375 (98.4375)	
+Epoch: [92/120][100/391]	LR: 0.006067	Loss 0.0482 (0.0690)	Top 1-acc 99.2188 (97.7104)	
+Epoch: [92/120][200/391]	LR: 0.006067	Loss 0.0429 (0.0735)	Top 1-acc 98.4375 (97.5396)	
+Epoch: [92/120][300/391]	LR: 0.006067	Loss 0.0932 (0.0745)	Top 1-acc 97.6562 (97.4720)	
+* Epoch: [92/120]	 Time 6.919632434844971	 Top 1-acc 97.446  	 Train Loss 0.075
+Test (on val set): [92/120][0/79]	Time 0.314 (0.314)	Loss 0.3608 (0.3608)	Top 1-acc 91.4062 (91.4062)	
+* Epoch: [92/120]	 Top 1-acc 91.500 	 Test Loss 0.339
+Val accuracy, current = 91.5, best = 92.3
+Epoch 93, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [93/120][0/391]	LR: 0.005885	Loss 0.0448 (0.0448)	Top 1-acc 98.4375 (98.4375)	
+Epoch: [93/120][100/391]	LR: 0.005885	Loss 0.4974 (0.0915)	Top 1-acc 86.7188 (97.0761)	
+Epoch: [93/120][200/391]	LR: 0.005885	Loss 0.1083 (0.0859)	Top 1-acc 95.3125 (97.1354)	
+Epoch: [93/120][300/391]	LR: 0.005885	Loss 0.1129 (0.0815)	Top 1-acc 95.3125 (97.2695)	
+* Epoch: [93/120]	 Time 6.920037746429443	 Top 1-acc 97.328  	 Train Loss 0.080
+Test (on val set): [93/120][0/79]	Time 0.319 (0.319)	Loss 0.3161 (0.3161)	Top 1-acc 92.9688 (92.9688)	
+* Epoch: [93/120]	 Top 1-acc 92.370 	 Test Loss 0.311
+Val accuracy, current = 92.37, best = 92.37
+Epoch 94, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [94/120][0/391]	LR: 0.005709	Loss 0.0410 (0.0410)	Top 1-acc 97.6562 (97.6562)	
+Epoch: [94/120][100/391]	LR: 0.005709	Loss 0.0423 (0.0911)	Top 1-acc 98.4375 (96.9446)	
+Epoch: [94/120][200/391]	LR: 0.005709	Loss 0.0124 (0.0851)	Top 1-acc 100.0000 (97.1238)	
+Epoch: [94/120][300/391]	LR: 0.005709	Loss 0.0567 (0.0827)	Top 1-acc 98.4375 (97.1813)	
+* Epoch: [94/120]	 Time 6.88842511177063	 Top 1-acc 97.140  	 Train Loss 0.084
+Test (on val set): [94/120][0/79]	Time 0.329 (0.329)	Loss 0.5528 (0.5528)	Top 1-acc 86.7188 (86.7188)	
+* Epoch: [94/120]	 Top 1-acc 89.350 	 Test Loss 0.442
+Val accuracy, current = 89.35, best = 92.37
+Epoch 95, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [95/120][0/391]	LR: 0.005538	Loss 0.0920 (0.0920)	Top 1-acc 96.8750 (96.8750)	
+Epoch: [95/120][100/391]	LR: 0.005538	Loss 0.0779 (0.0888)	Top 1-acc 96.8750 (97.0838)	
+Epoch: [95/120][200/391]	LR: 0.005538	Loss 0.0439 (0.0931)	Top 1-acc 100.0000 (96.9100)	
+Epoch: [95/120][300/391]	LR: 0.005538	Loss 0.1644 (0.0934)	Top 1-acc 94.5312 (96.9087)	
+* Epoch: [95/120]	 Time 6.8826305866241455	 Top 1-acc 96.950  	 Train Loss 0.091
+Test (on val set): [95/120][0/79]	Time 0.311 (0.311)	Loss 0.1532 (0.1532)	Top 1-acc 96.0938 (96.0938)	
+* Epoch: [95/120]	 Top 1-acc 92.010 	 Test Loss 0.323
+Val accuracy, current = 92.01, best = 92.37
+Epoch 96, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [96/120][0/391]	LR: 0.005371	Loss 0.0168 (0.0168)	Top 1-acc 100.0000 (100.0000)	
+Epoch: [96/120][100/391]	LR: 0.005371	Loss 0.0759 (0.0816)	Top 1-acc 98.4375 (97.3468)	
+Epoch: [96/120][200/391]	LR: 0.005371	Loss 0.0434 (0.0790)	Top 1-acc 99.2188 (97.4813)	
+Epoch: [96/120][300/391]	LR: 0.005371	Loss 0.0199 (0.0758)	Top 1-acc 99.2188 (97.5420)	
+* Epoch: [96/120]	 Time 6.798357009887695	 Top 1-acc 97.384  	 Train Loss 0.080
+Test (on val set): [96/120][0/79]	Time 0.317 (0.317)	Loss 0.2576 (0.2576)	Top 1-acc 92.9688 (92.9688)	
+* Epoch: [96/120]	 Top 1-acc 91.170 	 Test Loss 0.358
+Val accuracy, current = 91.17, best = 92.37
+Epoch 97, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [97/120][0/391]	LR: 0.005210	Loss 0.0707 (0.0707)	Top 1-acc 97.6562 (97.6562)	
+Epoch: [97/120][100/391]	LR: 0.005210	Loss 0.0306 (0.0655)	Top 1-acc 99.2188 (97.8419)	
+Epoch: [97/120][200/391]	LR: 0.005210	Loss 0.1001 (0.0719)	Top 1-acc 96.0938 (97.6252)	
+Epoch: [97/120][300/391]	LR: 0.005210	Loss 0.0416 (0.0701)	Top 1-acc 99.2188 (97.7004)	
+* Epoch: [97/120]	 Time 6.644820928573608	 Top 1-acc 97.772  	 Train Loss 0.068
+Test (on val set): [97/120][0/79]	Time 0.320 (0.320)	Loss 0.2446 (0.2446)	Top 1-acc 94.5312 (94.5312)	
+* Epoch: [97/120]	 Top 1-acc 91.830 	 Test Loss 0.341
+Val accuracy, current = 91.83, best = 92.37
+Epoch 98, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [98/120][0/391]	LR: 0.005054	Loss 0.0479 (0.0479)	Top 1-acc 98.4375 (98.4375)	
+Epoch: [98/120][100/391]	LR: 0.005054	Loss 0.0761 (0.0685)	Top 1-acc 97.6562 (97.6408)	
+Epoch: [98/120][200/391]	LR: 0.005054	Loss 0.0290 (0.0728)	Top 1-acc 99.2188 (97.5474)	
+Epoch: [98/120][300/391]	LR: 0.005054	Loss 0.1271 (0.0742)	Top 1-acc 95.3125 (97.5395)	
+* Epoch: [98/120]	 Time 6.695800065994263	 Top 1-acc 97.518  	 Train Loss 0.075
+Test (on val set): [98/120][0/79]	Time 0.332 (0.332)	Loss 0.2633 (0.2633)	Top 1-acc 93.7500 (93.7500)	
+* Epoch: [98/120]	 Top 1-acc 90.120 	 Test Loss 0.419
+Val accuracy, current = 90.12, best = 92.37
+Epoch 99, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [99/120][0/391]	LR: 0.004902	Loss 0.0468 (0.0468)	Top 1-acc 99.2188 (99.2188)	
+Epoch: [99/120][100/391]	LR: 0.004902	Loss 0.0494 (0.0743)	Top 1-acc 99.2188 (97.5789)	
+Epoch: [99/120][200/391]	LR: 0.004902	Loss 0.0511 (0.0713)	Top 1-acc 98.4375 (97.5941)	
+Epoch: [99/120][300/391]	LR: 0.004902	Loss 0.0700 (0.0722)	Top 1-acc 97.6562 (97.5940)	
+* Epoch: [99/120]	 Time 6.943959951400757	 Top 1-acc 97.610  	 Train Loss 0.072
+Test (on val set): [99/120][0/79]	Time 0.306 (0.306)	Loss 0.2720 (0.2720)	Top 1-acc 93.7500 (93.7500)	
+* Epoch: [99/120]	 Top 1-acc 91.280 	 Test Loss 0.366
+Val accuracy, current = 91.28, best = 92.37
+Epoch 100, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [100/120][0/391]	LR: 0.004755	Loss 0.0311 (0.0311)	Top 1-acc 100.0000 (100.0000)	
+Epoch: [100/120][100/391]	LR: 0.004755	Loss 0.0342 (0.0611)	Top 1-acc 99.2188 (98.0972)	
+Epoch: [100/120][200/391]	LR: 0.004755	Loss 0.0790 (0.0667)	Top 1-acc 97.6562 (97.8001)	
+Epoch: [100/120][300/391]	LR: 0.004755	Loss 0.0518 (0.0674)	Top 1-acc 98.4375 (97.8327)	
+* Epoch: [100/120]	 Time 6.806966304779053	 Top 1-acc 97.652  	 Train Loss 0.072
+Test (on val set): [100/120][0/79]	Time 0.311 (0.311)	Loss 0.2664 (0.2664)	Top 1-acc 94.5312 (94.5312)	
+* Epoch: [100/120]	 Top 1-acc 91.890 	 Test Loss 0.341
+Val accuracy, current = 91.89, best = 92.37
+Epoch 101, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [101/120][0/391]	LR: 0.004613	Loss 0.0799 (0.0799)	Top 1-acc 97.6562 (97.6562)	
+Epoch: [101/120][100/391]	LR: 0.004613	Loss 0.0604 (0.0819)	Top 1-acc 98.4375 (97.3546)	
+Epoch: [101/120][200/391]	LR: 0.004613	Loss 0.0495 (0.0737)	Top 1-acc 98.4375 (97.6096)	
+Epoch: [101/120][300/391]	LR: 0.004613	Loss 0.0656 (0.0767)	Top 1-acc 96.0938 (97.4824)	
+* Epoch: [101/120]	 Time 6.799477815628052	 Top 1-acc 97.534  	 Train Loss 0.076
+Test (on val set): [101/120][0/79]	Time 0.309 (0.309)	Loss 0.2527 (0.2527)	Top 1-acc 93.7500 (93.7500)	
+* Epoch: [101/120]	 Top 1-acc 92.110 	 Test Loss 0.325
+Val accuracy, current = 92.11, best = 92.37
+Epoch 102, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [102/120][0/391]	LR: 0.004474	Loss 0.0577 (0.0577)	Top 1-acc 98.4375 (98.4375)	
+Epoch: [102/120][100/391]	LR: 0.004474	Loss 0.0281 (0.0851)	Top 1-acc 100.0000 (97.1844)	
+Epoch: [102/120][200/391]	LR: 0.004474	Loss 0.1053 (0.0766)	Top 1-acc 96.0938 (97.4230)	
+Epoch: [102/120][300/391]	LR: 0.004474	Loss 0.0275 (0.0748)	Top 1-acc 99.2188 (97.4927)	
+* Epoch: [102/120]	 Time 7.022039890289307	 Top 1-acc 97.630  	 Train Loss 0.071
+Test (on val set): [102/120][0/79]	Time 0.324 (0.324)	Loss 0.1094 (0.1094)	Top 1-acc 98.4375 (98.4375)	
+* Epoch: [102/120]	 Top 1-acc 91.830 	 Test Loss 0.342
+Val accuracy, current = 91.83, best = 92.37
+Epoch 103, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [103/120][0/391]	LR: 0.004340	Loss 0.4576 (0.4576)	Top 1-acc 84.3750 (84.3750)	
+Epoch: [103/120][100/391]	LR: 0.004340	Loss 0.0797 (0.0808)	Top 1-acc 98.4375 (97.2772)	
+Epoch: [103/120][200/391]	LR: 0.004340	Loss 0.2267 (0.0758)	Top 1-acc 89.8438 (97.4269)	
+Epoch: [103/120][300/391]	LR: 0.004340	Loss 0.0657 (0.0725)	Top 1-acc 99.2188 (97.6225)	
+* Epoch: [103/120]	 Time 6.782329797744751	 Top 1-acc 97.528  	 Train Loss 0.074
+Test (on val set): [103/120][0/79]	Time 0.317 (0.317)	Loss 0.3470 (0.3470)	Top 1-acc 93.7500 (93.7500)	
+* Epoch: [103/120]	 Top 1-acc 92.180 	 Test Loss 0.315
+Val accuracy, current = 92.18, best = 92.37
+Epoch 104, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [104/120][0/391]	LR: 0.004210	Loss 0.0674 (0.0674)	Top 1-acc 98.4375 (98.4375)	
+Epoch: [104/120][100/391]	LR: 0.004210	Loss 0.0883 (0.0755)	Top 1-acc 96.0938 (97.6795)	
+Epoch: [104/120][200/391]	LR: 0.004210	Loss 0.0214 (0.0682)	Top 1-acc 100.0000 (97.8584)	
+Epoch: [104/120][300/391]	LR: 0.004210	Loss 0.0399 (0.0709)	Top 1-acc 98.4375 (97.7497)	
+* Epoch: [104/120]	 Time 6.881922483444214	 Top 1-acc 97.752  	 Train Loss 0.071
+Test (on val set): [104/120][0/79]	Time 0.325 (0.325)	Loss 0.3828 (0.3828)	Top 1-acc 91.4062 (91.4062)	
+* Epoch: [104/120]	 Top 1-acc 91.810 	 Test Loss 0.334
+Val accuracy, current = 91.81, best = 92.37
+Epoch 105, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [105/120][0/391]	LR: 0.004083	Loss 0.0632 (0.0632)	Top 1-acc 97.6562 (97.6562)	
+Epoch: [105/120][100/391]	LR: 0.004083	Loss 0.0230 (0.0842)	Top 1-acc 99.2188 (97.2540)	
+Epoch: [105/120][200/391]	LR: 0.004083	Loss 0.0507 (0.0785)	Top 1-acc 98.4375 (97.4075)	
+Epoch: [105/120][300/391]	LR: 0.004083	Loss 0.0628 (0.0754)	Top 1-acc 98.4375 (97.5109)	
+* Epoch: [105/120]	 Time 6.942291736602783	 Top 1-acc 97.714  	 Train Loss 0.070
+Test (on val set): [105/120][0/79]	Time 0.316 (0.316)	Loss 0.2565 (0.2565)	Top 1-acc 93.7500 (93.7500)	
+* Epoch: [105/120]	 Top 1-acc 92.510 	 Test Loss 0.296
+Val accuracy, current = 92.51, best = 92.51
+Epoch 106, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [106/120][0/391]	LR: 0.003961	Loss 0.0257 (0.0257)	Top 1-acc 99.2188 (99.2188)	
+Epoch: [106/120][100/391]	LR: 0.003961	Loss 0.0497 (0.0511)	Top 1-acc 99.2188 (98.3601)	
+Epoch: [106/120][200/391]	LR: 0.003961	Loss 0.0283 (0.0595)	Top 1-acc 99.2188 (98.0683)	
+Epoch: [106/120][300/391]	LR: 0.003961	Loss 0.0663 (0.0625)	Top 1-acc 97.6562 (97.9781)	
+* Epoch: [106/120]	 Time 6.838653802871704	 Top 1-acc 98.034  	 Train Loss 0.061
+Test (on val set): [106/120][0/79]	Time 0.314 (0.314)	Loss 0.3330 (0.3330)	Top 1-acc 89.8438 (89.8438)	
+* Epoch: [106/120]	 Top 1-acc 92.580 	 Test Loss 0.304
+Val accuracy, current = 92.58, best = 92.58
+Epoch 107, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [107/120][0/391]	LR: 0.003842	Loss 0.0288 (0.0288)	Top 1-acc 99.2188 (99.2188)	
+Epoch: [107/120][100/391]	LR: 0.003842	Loss 0.0228 (0.0696)	Top 1-acc 100.0000 (97.6795)	
+Epoch: [107/120][200/391]	LR: 0.003842	Loss 0.0738 (0.0843)	Top 1-acc 97.6562 (97.1859)	
+Epoch: [107/120][300/391]	LR: 0.003842	Loss 0.0146 (0.0830)	Top 1-acc 100.0000 (97.1942)	
+* Epoch: [107/120]	 Time 6.859205484390259	 Top 1-acc 97.312  	 Train Loss 0.080
+Test (on val set): [107/120][0/79]	Time 0.316 (0.316)	Loss 0.3827 (0.3827)	Top 1-acc 89.8438 (89.8438)	
+* Epoch: [107/120]	 Top 1-acc 92.390 	 Test Loss 0.310
+Val accuracy, current = 92.39, best = 92.58
+Epoch 108, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [108/120][0/391]	LR: 0.003727	Loss 0.0270 (0.0270)	Top 1-acc 99.2188 (99.2188)	
+Epoch: [108/120][100/391]	LR: 0.003727	Loss 0.1085 (0.1049)	Top 1-acc 96.8750 (96.4418)	
+Epoch: [108/120][200/391]	LR: 0.003727	Loss 0.0596 (0.0962)	Top 1-acc 97.6562 (96.8128)	
+Epoch: [108/120][300/391]	LR: 0.003727	Loss 0.3501 (0.0897)	Top 1-acc 85.9375 (97.0541)	
+* Epoch: [108/120]	 Time 6.911395072937012	 Top 1-acc 97.148  	 Train Loss 0.086
+Test (on val set): [108/120][0/79]	Time 0.330 (0.330)	Loss 0.1459 (0.1459)	Top 1-acc 96.0938 (96.0938)	
+* Epoch: [108/120]	 Top 1-acc 92.380 	 Test Loss 0.312
+Val accuracy, current = 92.38, best = 92.58
+Epoch 109, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [109/120][0/391]	LR: 0.003615	Loss 0.0662 (0.0662)	Top 1-acc 98.4375 (98.4375)	
+Epoch: [109/120][100/391]	LR: 0.003615	Loss 0.0668 (0.0856)	Top 1-acc 96.8750 (97.0838)	
+Epoch: [109/120][200/391]	LR: 0.003615	Loss 0.0496 (0.0812)	Top 1-acc 97.6562 (97.3064)	
+Epoch: [109/120][300/391]	LR: 0.003615	Loss 0.0852 (0.0788)	Top 1-acc 97.6562 (97.4045)	
+* Epoch: [109/120]	 Time 6.786764860153198	 Top 1-acc 97.522  	 Train Loss 0.075
+Test (on val set): [109/120][0/79]	Time 0.313 (0.313)	Loss 0.4861 (0.4861)	Top 1-acc 88.2812 (88.2812)	
+* Epoch: [109/120]	 Top 1-acc 90.480 	 Test Loss 0.400
+Val accuracy, current = 90.48, best = 92.58
+Epoch 110, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [110/120][0/391]	LR: 0.003507	Loss 0.0683 (0.0683)	Top 1-acc 97.6562 (97.6562)	
+Epoch: [110/120][100/391]	LR: 0.003507	Loss 0.0629 (0.0557)	Top 1-acc 97.6562 (98.2132)	
+Epoch: [110/120][200/391]	LR: 0.003507	Loss 0.0879 (0.0623)	Top 1-acc 97.6562 (98.0449)	
+Epoch: [110/120][300/391]	LR: 0.003507	Loss 0.0434 (0.0669)	Top 1-acc 99.2188 (97.8743)	
+* Epoch: [110/120]	 Time 6.8433825969696045	 Top 1-acc 97.836  	 Train Loss 0.067
+Test (on val set): [110/120][0/79]	Time 0.311 (0.311)	Loss 0.1528 (0.1528)	Top 1-acc 96.8750 (96.8750)	
+* Epoch: [110/120]	 Top 1-acc 91.400 	 Test Loss 0.366
+Val accuracy, current = 91.4, best = 92.58
+Epoch 111, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [111/120][0/391]	LR: 0.003401	Loss 0.0288 (0.0288)	Top 1-acc 98.4375 (98.4375)	
+Epoch: [111/120][100/391]	LR: 0.003401	Loss 0.0372 (0.0634)	Top 1-acc 98.4375 (97.9270)	
+Epoch: [111/120][200/391]	LR: 0.003401	Loss 0.0625 (0.0694)	Top 1-acc 98.4375 (97.7418)	
+Epoch: [111/120][300/391]	LR: 0.003401	Loss 0.0774 (0.0682)	Top 1-acc 96.0938 (97.7627)	
+* Epoch: [111/120]	 Time 6.948710680007935	 Top 1-acc 97.742  	 Train Loss 0.069
+Test (on val set): [111/120][0/79]	Time 0.307 (0.307)	Loss 0.3001 (0.3001)	Top 1-acc 92.1875 (92.1875)	
+* Epoch: [111/120]	 Top 1-acc 91.790 	 Test Loss 0.346
+Val accuracy, current = 91.79, best = 92.58
+Epoch 112, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [112/120][0/391]	LR: 0.003299	Loss 0.0370 (0.0370)	Top 1-acc 97.6562 (97.6562)	
+Epoch: [112/120][100/391]	LR: 0.003299	Loss 0.0342 (0.0684)	Top 1-acc 100.0000 (97.6872)	
+Epoch: [112/120][200/391]	LR: 0.003299	Loss 0.0456 (0.0690)	Top 1-acc 98.4375 (97.6290)	
+Epoch: [112/120][300/391]	LR: 0.003299	Loss 0.0186 (0.0672)	Top 1-acc 100.0000 (97.7393)	
+* Epoch: [112/120]	 Time 6.980872392654419	 Top 1-acc 97.742  	 Train Loss 0.068
+Test (on val set): [112/120][0/79]	Time 0.334 (0.334)	Loss 0.3414 (0.3414)	Top 1-acc 93.7500 (93.7500)	
+* Epoch: [112/120]	 Top 1-acc 91.390 	 Test Loss 0.354
+Val accuracy, current = 91.39, best = 92.58
+Epoch 113, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [113/120][0/391]	LR: 0.003200	Loss 0.0617 (0.0617)	Top 1-acc 96.0938 (96.0938)	
+Epoch: [113/120][100/391]	LR: 0.003200	Loss 0.0308 (0.0605)	Top 1-acc 98.4375 (98.1281)	
+Epoch: [113/120][200/391]	LR: 0.003200	Loss 0.0831 (0.0645)	Top 1-acc 96.8750 (97.9711)	
+Epoch: [113/120][300/391]	LR: 0.003200	Loss 0.0432 (0.0681)	Top 1-acc 98.4375 (97.8042)	
+* Epoch: [113/120]	 Time 6.918027877807617	 Top 1-acc 97.874  	 Train Loss 0.067
+Test (on val set): [113/120][0/79]	Time 0.339 (0.339)	Loss 0.3864 (0.3864)	Top 1-acc 93.7500 (93.7500)	
+* Epoch: [113/120]	 Top 1-acc 91.370 	 Test Loss 0.362
+Val accuracy, current = 91.37, best = 92.58
+Epoch 114, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [114/120][0/391]	LR: 0.003104	Loss 0.4417 (0.4417)	Top 1-acc 85.1562 (85.1562)	
+Epoch: [114/120][100/391]	LR: 0.003104	Loss 0.0285 (0.0783)	Top 1-acc 100.0000 (97.4474)	
+Epoch: [114/120][200/391]	LR: 0.003104	Loss 0.0343 (0.0744)	Top 1-acc 99.2188 (97.6407)	
+Epoch: [114/120][300/391]	LR: 0.003104	Loss 0.0414 (0.0698)	Top 1-acc 98.4375 (97.7886)	
+* Epoch: [114/120]	 Time 6.7970709800720215	 Top 1-acc 97.696  	 Train Loss 0.072
+Test (on val set): [114/120][0/79]	Time 0.305 (0.305)	Loss 0.6256 (0.6256)	Top 1-acc 91.4062 (91.4062)	
+* Epoch: [114/120]	 Top 1-acc 90.140 	 Test Loss 0.407
+Val accuracy, current = 90.14, best = 92.58
+Epoch 115, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [115/120][0/391]	LR: 0.003011	Loss 0.0422 (0.0422)	Top 1-acc 97.6562 (97.6562)	
+Epoch: [115/120][100/391]	LR: 0.003011	Loss 0.0314 (0.0766)	Top 1-acc 100.0000 (97.3159)	
+Epoch: [115/120][200/391]	LR: 0.003011	Loss 0.0481 (0.0684)	Top 1-acc 98.4375 (97.7456)	
+Epoch: [115/120][300/391]	LR: 0.003011	Loss 0.0252 (0.0677)	Top 1-acc 100.0000 (97.7886)	
+* Epoch: [115/120]	 Time 6.7133402824401855	 Top 1-acc 97.846  	 Train Loss 0.066
+Test (on val set): [115/120][0/79]	Time 0.315 (0.315)	Loss 0.2480 (0.2480)	Top 1-acc 94.5312 (94.5312)	
+* Epoch: [115/120]	 Top 1-acc 92.460 	 Test Loss 0.310
+Val accuracy, current = 92.46, best = 92.58
+Epoch 116, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [116/120][0/391]	LR: 0.002921	Loss 0.0661 (0.0661)	Top 1-acc 98.4375 (98.4375)	
+Epoch: [116/120][100/391]	LR: 0.002921	Loss 0.0509 (0.0591)	Top 1-acc 97.6562 (98.1358)	
+Epoch: [116/120][200/391]	LR: 0.002921	Loss 0.0341 (0.0632)	Top 1-acc 99.2188 (97.9516)	
+Epoch: [116/120][300/391]	LR: 0.002921	Loss 0.0166 (0.0614)	Top 1-acc 99.2188 (98.0404)	
+* Epoch: [116/120]	 Time 6.769019603729248	 Top 1-acc 98.022  	 Train Loss 0.062
+Test (on val set): [116/120][0/79]	Time 0.317 (0.317)	Loss 0.5076 (0.5076)	Top 1-acc 92.1875 (92.1875)	
+* Epoch: [116/120]	 Top 1-acc 92.520 	 Test Loss 0.314
+Val accuracy, current = 92.52, best = 92.58
+Epoch 117, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [117/120][0/391]	LR: 0.002833	Loss 0.0175 (0.0175)	Top 1-acc 99.2188 (99.2188)	
+Epoch: [117/120][100/391]	LR: 0.002833	Loss 0.0256 (0.0580)	Top 1-acc 100.0000 (98.2441)	
+Epoch: [117/120][200/391]	LR: 0.002833	Loss 0.0669 (0.0633)	Top 1-acc 97.6562 (98.0294)	
+Epoch: [117/120][300/391]	LR: 0.002833	Loss 0.0753 (0.0663)	Top 1-acc 98.4375 (97.8561)	
+* Epoch: [117/120]	 Time 6.715762376785278	 Top 1-acc 97.890  	 Train Loss 0.066
+Test (on val set): [117/120][0/79]	Time 0.310 (0.310)	Loss 0.3301 (0.3301)	Top 1-acc 92.9688 (92.9688)	
+* Epoch: [117/120]	 Top 1-acc 91.200 	 Test Loss 0.376
+Val accuracy, current = 91.2, best = 92.58
+Epoch 118, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [118/120][0/391]	LR: 0.002748	Loss 0.0436 (0.0436)	Top 1-acc 98.4375 (98.4375)	
+Epoch: [118/120][100/391]	LR: 0.002748	Loss 0.0590 (0.0460)	Top 1-acc 98.4375 (98.5381)	
+Epoch: [118/120][200/391]	LR: 0.002748	Loss 0.0462 (0.0530)	Top 1-acc 98.4375 (98.3364)	
+Epoch: [118/120][300/391]	LR: 0.002748	Loss 0.0311 (0.0556)	Top 1-acc 99.2188 (98.2428)	
+* Epoch: [118/120]	 Time 6.93683648109436	 Top 1-acc 98.186  	 Train Loss 0.057
+Test (on val set): [118/120][0/79]	Time 0.314 (0.314)	Loss 0.3463 (0.3463)	Top 1-acc 90.6250 (90.6250)	
+* Epoch: [118/120]	 Top 1-acc 92.120 	 Test Loss 0.329
+Val accuracy, current = 92.12, best = 92.58
+Epoch 119, kernel = [13.  7.  1.], sigma = [2. 1. 0.], weights = [0.05263158 0.15789474 0.78947368]
+Epoch: [119/120][0/391]	LR: 0.002666	Loss 0.0333 (0.0333)	Top 1-acc 100.0000 (100.0000)	
+Epoch: [119/120][100/391]	LR: 0.002666	Loss 0.1040 (0.0658)	Top 1-acc 96.0938 (97.8960)	
+Epoch: [119/120][200/391]	LR: 0.002666	Loss 0.0346 (0.0661)	Top 1-acc 99.2188 (97.8778)	
+Epoch: [119/120][300/391]	LR: 0.002666	Loss 0.0290 (0.0645)	Top 1-acc 99.2188 (97.8821)	
+* Epoch: [119/120]	 Time 6.829228639602661	 Top 1-acc 97.928  	 Train Loss 0.063
+Test (on val set): [119/120][0/79]	Time 0.324 (0.324)	Loss 0.3717 (0.3717)	Top 1-acc 89.0625 (89.0625)	
+* Epoch: [119/120]	 Top 1-acc 92.060 	 Test Loss 0.335
+Val accuracy, current = 92.06, best = 92.58
+Best accuracy (top-1 and 5 acc): 92.58 99.78
