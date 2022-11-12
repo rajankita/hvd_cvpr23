@@ -228,7 +228,7 @@ def main():
     print('the number of model parameters: {}'.format(sum([p.data.nelement() for p in model.parameters()])))
 
     # define loss function (criterion) and optimizer
-    criterion = nn.CrossEntropyLoss().cuda()
+    #criterion = nn.CrossEntropyLoss().cuda()
     
     criterion = SuperLoss(C=numberofclass, lam=lam).cuda()
     optimizer = torch.optim.SGD(model.parameters(), args.lr,
